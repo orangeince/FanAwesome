@@ -55,11 +55,12 @@ Routing.Routes[.Post, "/fanplan"] = {
     print("postBodyString:\(request.postBodyString)")
     if let postJson = try? request.postBodyString.zegJsonDecode() {
         print("postJson: \(postJson)")        
-	if let postJson = postJson as? [String : Any] {
-		if let text = postJson["text"] as? String {
-		    response.appendBody(string: "{\"text\": \"received: \(text)\"}")
-	    }
-	}
+        if let postJson = postJson as? [String : Any] {
+            if let text = postJson["text"] as? String, userName = postJson["user_name"] as? String {
+                let responseString = FanPlanHandler.handleFanPlanWith(commandStr: text, userName: userName)
+                response.appendBody(string: responseString)
+            }
+        }
     } else {
 	print("post json invaild!")
         response.appendBody(string: "post params invaild!")
