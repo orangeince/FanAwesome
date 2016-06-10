@@ -5,23 +5,23 @@ provides-top-level:
 provides-nominal:
 provides-member:
 depends-top-level:
-- "Dir"
-- "StringLiteralType"
-- "token"
-- "ZEGDecoder"
-- !private "~="
-- "UnicodeScalarType"
-- "Routing"
-- "PerfectError"
 - "Any"
-- "IntegerLiteralType"
-- "PerfectServer"
-- "String"
-- "print"
+- "Dir"
 - "FloatLiteralType"
-- "webRoot"
-- "ZEGResponse"
 - "HTTPServer"
+- "ZEGResponse"
+- "token"
+- "webRoot"
+- "String"
+- "ZEGDecoder"
+- "UnicodeScalarType"
+- "StringLiteralType"
+- "PerfectServer"
+- !private "~="
+- "PerfectError"
+- "Routing"
+- "IntegerLiteralType"
+- "print"
 depends-member:
 - ["Ps9AnyObject", "appendBody"]
 - ["Ps9AnyObject", "chat"]
@@ -336,4 +336,4 @@ depends-external:
 - "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectNet.swiftmodule"
 - "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectThread.swiftmodule"
 - "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.swiftmodule"
-interface-hash: "857e32d824118a4007eaf92c95fd46a2"
+interface-hash: "717955b3aa116316f34be745bfab6f25"

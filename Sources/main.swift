@@ -52,15 +52,18 @@ Routing.Routes[.Post, "/"] = {
 Routing.Routes[.Post, "/fanplan"] = {    
     request, response in     
     print("received beary's post!")    
-    if let postJson = try? request.postBodyString.zegJsonDecode() as? [String : Any] {
+    if let postJson = try? request.postBodyString.zegJsonDecode() {
         print("postJson: \(postJson)")        
-        if let text = postJson?["text"] as? String {
-            response.appendBody(string: "{text: \"received: \(text)\"}")
+	if let postJson = postJson as? [String : Any] {
+		if let text = postJson["text"] as? String {
+		    response.appendBody(string: "{text: \"received: \(text)\"}")
 	    }
+	}
     } else {
-        response.appendBody(string: "{error: \"Invaild params\"}")        
+	print("post json invaild!")
+        response.appendBody(string: "post params invaild!")
     }
-
+    response.requestCompleted()
 }
 
 

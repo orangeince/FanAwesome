@@ -1,8 +1,8 @@
 version: "Swift version 3.0-dev (LLVM cb08d1dbbd, Clang 383859a9c4, Swift 9e8266aaeb)"
 options: "0bfb8596ccfd2e64cff9b570813901ef"
-build_time: [518875130, 780489000]
+build_time: [518877354, 716701000]
 inputs:
-  "/orange_pro/swift_dev/Fanplan/Sources/main.swift": [518875127, 0]
+  "/orange_pro/swift_dev/Fanplan/Sources/main.swift": [518877351, 0]
   "/orange_pro/swift_dev/Fanplan/Sources/ZEGResponse.swift": [518874617, 0]
   "/orange_pro/swift_dev/Fanplan/Sources/TypeExtension.swift": [518874617, 0]
   "/orange_pro/swift_dev/Fanplan/Sources/Types.swift": [518874617, 0]
