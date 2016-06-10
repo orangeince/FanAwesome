@@ -166,7 +166,7 @@ class FanPlanHandler {
         if commandStr == "fanplan" {
             return commandHelpStr
         }
-        let strs = explodedString(str: commandStr, bySeparator: " ")
+        var strs = explodedString(str: commandStr, bySeparator: " ")
         strs.removeFirst()
         for commandStr in strs {
             let cmd = CommandMode(commandStr: commandStr)
