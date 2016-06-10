@@ -78,10 +78,10 @@ enum FanPlanCommandType {
         if str =~ Week.checkPattern {
             return (Week, 0)
         } else if str =~ WeekDay.checkPattern {
-            let n = Int(str.substring(from: str.startIndex.successor()))!
+            let n = Int(str.substring(from: str.index(after: str.startIndex.successor())))!
             return (WeekDay, n)
         } else if str =~ WeekDayError.checkPattern {
-            let n = Int(str.substring(from: str.startIndex.successor()))!
+            let n = Int(str.substring(from: str.index(after: str.startIndex.successor())))!
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
             let n = offsetDayDict[str]!
@@ -90,7 +90,7 @@ enum FanPlanCommandType {
             let n = str.characters.contains("后") ? 0 : -1
             return (OffsetDayError, n)
         } else if str =~ ExplicitDay.checkPattern {
-            let nums = explodedString(str, bySeparator: ".")
+            let nums = explodedString(str: str, bySeparator: ".")
             var n = 0
             if nums.count == 2 {
                 n = Int(nums[0])! * 100 + Int(nums[1])!
