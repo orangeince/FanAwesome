@@ -104,6 +104,64 @@ enum FanPlanCommandType {
     }
 }
 
+struct FanPlanCommand {
+    var type: FanPlanCommandType
+    var constant: Int
+    static func getCommandFrom(str: String) -> FanPlanCommand? {
+        if let (type, constrant) = FanPlanCommandType.getFanPlanCommandTypeAndConstantFrom(str) {
+            return FanPlanCommand(type: type, constant: constrant)
+        }
+        return nil
+    }
+    
+    func executedReport(user: String) -> (Bool, String) {
+        let theKey = user + "-plan"
+        var success = true
+        var report = ""
+        switch type {
+        case .Week:
+            if constant < 0 {
+                if let _ = userConfig.dictionaryForKey(theKey) {
+                    //userConfig.str
+                    userConfig.setValue(nil, forKey: theKey)
+                    report =  "`\(user)`取消自动点饭成功"
+                } else {
+                    report =  "`\(user)`没有点饭计划"
+                }
+            } else {
+                report = "`\(user)`自动点饭成功"
+                if userConfig.dictionaryForKey(theKey) == nil {
+                    userConfig.setValue(NSDictionary(), forKey: theKey)
+                }
+            }
+        case .ExplicitDayError:
+            success = false
+            report = "指定的日期格式不对"
+        default:
+            return (false, "Command hasn't be executed")
+        }
+        return (success, report)
+    }
+}
+
+enum CommandMode {
+    case FanPlan(FanPlanCommand)
+    case UserName(String)
+    case UnKnown
+    case Help
+    init(commandStr: String) {
+        if userlist.contains(commandStr) {
+            self = .UserName(commandStr)
+        } else if commandStr == "help" {
+            self = .Help
+        } else if let fanplanCommand = FanPlanCommand.getCommandFrom(str: commandStr) {
+            self = .FanPlan(fanplanCommand)
+        } else {
+            self = .UnKnown
+        }
+    }
+}
+
 class FanPlanHandler {
     static func handleFanPlanWith(commandStr: String, userName: String) -> String {
         return ""
