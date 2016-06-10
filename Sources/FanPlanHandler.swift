@@ -108,7 +108,7 @@ struct FanPlanCommand {
     var type: FanPlanCommandType
     var constant: Int
     static func getCommandFrom(str: String) -> FanPlanCommand? {
-        if let (type, constrant) = FanPlanCommandType.getFanPlanCommandTypeAndConstantFrom(str) {
+        if let (type, constrant) = FanPlanCommandType.getFanPlanCommandTypeAndConstantFrom(str: str) {
             return FanPlanCommand(type: type, constant: constrant)
         }
         return nil
