@@ -43,6 +43,10 @@ struct UserConfig {
     var dateExcept: [NSDate] = []
 }
 
+func explodedString(str: String, bySeparator: Character) -> [String] {
+    return str.characters.split{ $0 == bySeparator }.map{ String($0) }
+}
+
 enum FanPlanCommandType {
     case Week
     case WeekDay
@@ -74,10 +78,10 @@ enum FanPlanCommandType {
         if str =~ Week.checkPattern {
             return (Week, 0)
         } else if str =~ WeekDay.checkPattern {
-            let n = Int(str.substringFromIndex(str.startIndex.successor()))!
+            let n = Int(str.substring(from: str.startIndex.successor()))!
             return (WeekDay, n)
         } else if str =~ WeekDayError.checkPattern {
-            let n = Int(str.substringFromIndex(str.startIndex.successor()))!
+            let n = Int(str.substring(from: str.startIndex.successor()))!
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
             let n = offsetDayDict[str]!
