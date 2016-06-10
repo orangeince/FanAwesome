@@ -157,7 +157,16 @@ var commands: [FanPlanCommand] = []
 var others: [String] = []
 var isHelpOthers = false
 var responseStr = ""
-let commandHelpStr = "智能晚饭君的指南"
+let commandHelpStr = "智能晚饭君的指南:" + "###fanplan\n
+- `fanplan ++` or `fanplan --`    每个工作日自动点饭 or 不自动点饭 \n
+- `fanplan +n` or `fanplan -n`    n = [1, 5] 每周n点饭 or 不点饭  例如: fanplan +1\n
+- `fanplan +今天` or `fanplan -今天`    明天点饭 or 不点饭\n
+- `fanplan +明天` or `fanplan -明天`    明天点饭 or 不点饭\n
+- `fanplan +后天` or `fanplan -后天`    后天点饭 or 不点饭\n
+- `fanplan +大后天` or `fanplan -大后天`    大后天点饭 or 不点饭\n
+- `fanplan +大大后天` or `fanplan -大大后天`    大大后天点饭 or 不点饭\n
+- `fanplan +Month.day` or `fanplan -Month.day`    Month.day那天点饭 or 不点饭\n
+- `fanplan XX help 某某`    帮某某自动点饭或者取消点饭 XX为以上任意命令"
 
 class FanPlanHandler {
     static func handleFanPlanWith(commandStr: String, userName: String) -> String {
