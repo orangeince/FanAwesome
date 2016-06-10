@@ -75,6 +75,7 @@ enum FanPlanCommandType {
         }
     }
     static func getFanPlanCommandTypeAndConstantFrom(str: String) -> (FanPlanCommandType, Int)? {
+        print("getFanPlanCommandTypeAndConstantFrom ing...")
         if str =~ Week.checkPattern {
             return (Week, 0)
         } else if str =~ WeekDay.checkPattern {
@@ -141,6 +142,7 @@ enum CommandMode {
     case UnKnown
     case Help
     init(commandStr: String) {
+        print("CommandMode Init")
         if userlist.contains(commandStr) {
             self = .UserName(commandStr)
         } else if commandStr == "help" {
@@ -168,15 +170,18 @@ class FanPlanHandler {
         for commandStr in strs {
             let cmd = CommandMode(commandStr: commandStr)
             switch(cmd) {
-            case .FanPlan(let cmd):
-                commands.append(cmd)
             case .UserName(let name):
                 others.append(name)
             case .Help:
                 isHelpOthers = true
+            case .FanPlan(let cmd):
+                commands.append(cmd)
             default:
                 break
             }
+        }
+        if commands.isEmpty {
+            return "命令解析失败，请参考命令手册输入正确的命令。输入`fanplan`查看命令手册"
         }
         if others.isEmpty {
             others.append(userName)
