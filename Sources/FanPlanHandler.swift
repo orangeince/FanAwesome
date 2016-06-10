@@ -121,18 +121,9 @@ struct FanPlanCommand {
         switch type {
         case .Week:
             if constant < 0 {
-                if let _ = userConfig.dictionaryForKey(theKey) {
-                    //userConfig.str
-                    userConfig.setValue(nil, forKey: theKey)
-                    report =  "`\(user)`取消自动点饭成功"
-                } else {
-                    report =  "`\(user)`没有点饭计划"
-                }
+
             } else {
-                report = "`\(user)`自动点饭成功"
-                if userConfig.dictionaryForKey(theKey) == nil {
-                    userConfig.setValue(NSDictionary(), forKey: theKey)
-                }
+                
             }
         case .ExplicitDayError:
             success = false
