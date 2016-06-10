@@ -167,6 +167,7 @@ class FanPlanHandler {
             return commandHelpStr
         }
         let strs = explodedString(str: commandStr, bySeparator: " ")
+        strs.removeFirst()
         for commandStr in strs {
             let cmd = CommandMode(commandStr: commandStr)
             switch(cmd) {
