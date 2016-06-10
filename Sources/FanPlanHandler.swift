@@ -115,7 +115,7 @@ struct FanPlanCommand {
     }
     
     func executedReport(user: String) -> (Bool, String) {
-        let theKey = user + "-plan"
+        //let theKey = user + "-plan"
         var success = true
         var report = ""
         switch type {
@@ -123,7 +123,7 @@ struct FanPlanCommand {
             if constant < 0 {
 
             } else {
-                
+
             }
         case .ExplicitDayError:
             success = false
@@ -153,8 +153,41 @@ enum CommandMode {
     }
 }
 
+var commands: [FanPlanCommand] = []
+var others: [String] = []
+var isHelpOthers = false
+var responseStr = ""
+
 class FanPlanHandler {
     static func handleFanPlanWith(commandStr: String, userName: String) -> String {
-        return ""
+        let strs = explodedString(str: commandStr, bySeparator: " ")
+        for commandStr in strs {
+            let cmd = CommandMode(commandStr: commandStr)
+            switch(cmd) {
+            case .FanPlan(let cmd):
+                commands.append(cmd)
+            case .UserName(let name):
+                others.append(name)
+            case .Help:
+                isHelpOthers = true
+            default:
+                break
+            }
+        }
+        if others.isEmpty {
+            others.append(userName)
+        }
+        for other in others {
+            for cmd in commands {
+                let (success, report) = cmd.executedReport(user: other)
+                if !success {
+                    responseStr = "命令解析失败，请参考命令手册输入正确的命令。输入`fanplan`查看命令手册"
+                    break
+                } else {
+                    responseStr += report
+                }
+            }
+        }
+        return responseStr
     }
 }
