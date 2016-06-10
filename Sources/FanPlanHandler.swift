@@ -7,11 +7,11 @@ struct RegexHelper {
     
     init(_ pattern: String) throws {
         try regex = NSRegularExpression(pattern: pattern,
-                                        options: .CaseInsensitive)
+                                        options: .caseInsensitive)
     }
     
     func match(input: String) -> Bool {
-        let matchedCount = regex.numberOfMatches(string: input,
+        let matchedCount = regex.numberOfMatches(in: input,
                                             options: [],
                                             range: NSMakeRange(0, input.utf16.count))
         return matchedCount > 0
@@ -25,7 +25,7 @@ precedence 130
 
 func =~(lhs: String, rhs: String) -> Bool {
     do {
-        return try RegexHelper(rhs).match(lhs)
+        return try RegexHelper(rhs).match(input: lhs)
     } catch _ {
         return false
     }
