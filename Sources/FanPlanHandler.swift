@@ -142,7 +142,7 @@ enum CommandMode {
     case UnKnown
     case Help
     init(commandStr: String) {
-        print("CommandMode Init")
+        print("CommandMode Init... commandStr: \(commandStr)")
         if userlist.contains(commandStr) {
             self = .UserName(commandStr)
         } else if commandStr == "help" {
