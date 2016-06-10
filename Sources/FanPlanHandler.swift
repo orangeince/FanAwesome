@@ -78,10 +78,10 @@ enum FanPlanCommandType {
         if str =~ Week.checkPattern {
             return (Week, 0)
         } else if str =~ WeekDay.checkPattern {
-            let n = Int(str.substring(from: str.index(after: str.startIndex.successor())))!
+            let n = Int(str.substring(from: str.index(after: str.startIndex)))!
             return (WeekDay, n)
         } else if str =~ WeekDayError.checkPattern {
-            let n = Int(str.substring(from: str.index(after: str.startIndex.successor())))!
+            let n = Int(str.substring(from: str.index(after: str.startIndex)))!
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
             let n = offsetDayDict[str]!
