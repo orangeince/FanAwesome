@@ -1,0 +1,161 @@
+{
+  "": {
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/master.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/Utilities.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Utilities.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Utilities.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Utilities~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Utilities.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/FastCGIServer.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGIServer.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGIServer.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGIServer~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGIServer.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/HTTPServer.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTPServer.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTPServer.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTPServer~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTPServer.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/HPACK.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HPACK.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HPACK.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HPACK~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HPACK.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/WebResponse.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebResponse.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebResponse.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebResponse~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebResponse.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/File.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/File.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/File.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/File~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/File.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/DynamicLoader.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/DynamicLoader.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/DynamicLoader.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/DynamicLoader~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/DynamicLoader.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/StaticFileHandler.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/StaticFileHandler.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/StaticFileHandler.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/StaticFileHandler~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/StaticFileHandler.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/MimeType.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeType.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeType.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeType~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeType.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/JSONConvertible.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/JSONConvertible.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/JSONConvertible.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/JSONConvertible~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/JSONConvertible.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/WebRequest.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebRequest.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebRequest.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebRequest~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebRequest.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/LogManager.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/LogManager.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/LogManager.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/LogManager~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/LogManager.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/Dir.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Dir.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Dir.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Dir~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Dir.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/WebConnection.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebConnection.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebConnection.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebConnection~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebConnection.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/Mustache.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Mustache.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Mustache.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Mustache~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Mustache.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/FastCGI.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGI.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGI.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGI~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/FastCGI.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/WebSocketHandler.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebSocketHandler.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebSocketHandler.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebSocketHandler~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/WebSocketHandler.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/Bytes.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Bytes.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Bytes.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Bytes~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Bytes.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/PerfectServer.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectServer.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectServer.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectServer~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectServer.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/MimeReader.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeReader.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeReader.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeReader~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/MimeReader.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/PerfectError.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectError.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectError.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectError~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/PerfectError.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/NotificationPusher.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/NotificationPusher.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/NotificationPusher.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/NotificationPusher~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/NotificationPusher.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/SysProcess.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SysProcess.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SysProcess.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SysProcess~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SysProcess.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/SwiftCompatibility.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SwiftCompatibility.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SwiftCompatibility.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SwiftCompatibility~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/SwiftCompatibility.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/HTTP2.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTP2.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTP2.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTP2~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/HTTP2.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectLib-0.32.0/Sources/PerfectLib/Routing.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Routing.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Routing.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Routing~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.build/Routing.swiftdeps"
+  }
+}

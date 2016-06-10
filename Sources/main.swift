@@ -54,8 +54,9 @@ Routing.Routes[.Post, "/fanplan"] = {
     print("received beary's post!")    
     if let postJson = try? request.postBodyString.zegJsonDecode() as? [String : Any] {
         print("postJson: \(postJson)")        
-        if let text = postJson["text"] as? String {
-            response.appenBody(string: "{text: \"received: \(text)\"}")
+        if let text = postJson?["text"] as? String {
+            response.appendBody(string: "{text: \"received: \(text)\"}")
+	}
     }
 
 }

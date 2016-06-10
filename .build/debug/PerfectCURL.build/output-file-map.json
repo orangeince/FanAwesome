@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.build/master.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectCURL-0.1.0/Sources/cURL.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.build/cURL.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.build/cURL.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.build/cURL~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.build/cURL.swiftdeps"
+  }
+}

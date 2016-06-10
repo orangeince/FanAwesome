@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/master.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/main.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/main.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/main.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/main~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/main.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/ZEGResponse.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGResponse.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGResponse.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGResponse~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGResponse.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/TypeExtension.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/TypeExtension.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/TypeExtension.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/TypeExtension~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/TypeExtension.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/Types.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/Types.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/Types.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/Types~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/Types.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/FanPlanHandler.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/FanPlanHandler.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/FanPlanHandler.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/FanPlanHandler~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/FanPlanHandler.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/ZEGDecoder.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGDecoder.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGDecoder.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGDecoder~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGDecoder.swiftdeps"
+  },
+  "/orange_pro/swift_dev/Fanplan/Sources/ZEGJSONPatch.swift": {
+    "dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGJSONPatch.d",
+    "object": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGJSONPatch.swift.o",
+    "swiftmodule": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGJSONPatch~partial.swiftmodule",
+    "swift-dependencies": "/orange_pro/swift_dev/Fanplan/.build/debug/FanPlan.build/ZEGJSONPatch.swiftdeps"
+  }
+}

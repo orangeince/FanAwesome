@@ -1,0 +1,5 @@
+version: "Swift version 3.0-dev (LLVM cb08d1dbbd, Clang 383859a9c4, Swift 9e8266aaeb)"
+options: "2892b199bb7198ab6f9f8b7bccc309e6"
+build_time: [518874915, 73465000]
+inputs:
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectCURL-0.1.0/Sources/cURL.swift": [518874903, 0]

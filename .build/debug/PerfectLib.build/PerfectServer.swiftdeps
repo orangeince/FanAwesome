@@ -1,0 +1,262 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "serverPerfectLibraries"
+- "PerfectServer"
+provides-nominal:
+- "V10PerfectLib13PerfectServer"
+provides-member:
+- ["V10PerfectLib13PerfectServer", ""]
+depends-top-level:
+- !private "DynamicLoader"
+- !private "=="
+- !private "Dir"
+- !private "IntegerLiteralType"
+- !private "setgid"
+- "serverPerfectLibraries"
+- !private "setuid"
+- !private "Log"
+- "PerfectServer"
+- !private "ThrowSystemError"
+- "StringLiteralType"
+- "String"
+- !private "Routing"
+- !private "NetEvent"
+- !private "||"
+- !private "getpwnam"
+- !private "UnicodeScalarType"
+- !private "FloatLiteralType"
+- !private "+"
+- !private "print"
+depends-member:
+- !private ["Ps9AnyObject", "initialize"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["P10Foundation10Bridgeable", "begins"]
+- !private ["P10Foundation10Bridgeable", "ends"]
+- !private ["P10Foundation10Bridgeable", "init"]
+- !private ["Ps7CVarArg", "pointee"]
+- !private ["Vs9Character", "deinit"]
+- !private ["Ps10Comparable", "begins"]
+- !private ["Ps10Comparable", "ends"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "pointee"]
+- !private ["Ps28CustomDebugStringConvertible", "begins"]
+- !private ["Ps28CustomDebugStringConvertible", "ends"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "pointee"]
+- ["Ps28CustomDebugStringConvertible", "some"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "begins"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "ends"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "pointee"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "begins"]
+- !private ["Ps17CustomReflectable", "ends"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "pointee"]
+- ["Ps17CustomReflectable", "some"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["V10PerfectLib3Dir", "forEachEntry"]
+- !private ["V10PerfectLib3Dir", "init"]
+- !private ["V10PerfectLib3Dir", "realPath"]
+- !private ["Sd", "deinit"]
+- !private ["V10PerfectLib13DynamicLoader", "init"]
+- !private ["V10PerfectLib13DynamicLoader", "loadFramework"]
+- !private ["V10PerfectLib13DynamicLoader", "loadLibrary"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "begins"]
+- !private ["Ps9Equatable", "ends"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "pointee"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "begins"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "ends"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "begins"]
+- !private ["Ps8Hashable", "ends"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "pointee"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
+- !private ["P10PerfectLib15JSONConvertible", "begins"]
+- !private ["P10PerfectLib15JSONConvertible", "ends"]
+- !private ["P10PerfectLib15JSONConvertible", "init"]
+- ["P10PerfectLib15JSONConvertible", "some"]
+- !private ["V10PerfectLib3Log", "info"]
+- !private ["Ps10MirrorPath", "begins"]
+- !private ["Ps10MirrorPath", "ends"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["C10PerfectNet8NetEvent", "initialize"]
+- ["Ps21NilLiteralConvertible", "some"]
+- ["Sq", "some"]
+- !private ["Ps12OutputStream", "begins"]
+- !private ["Ps12OutputStream", "ends"]
+- !private ["Ps12OutputStream", "init"]
+- !private ["V10PerfectLib13PerfectServer", "Dir"]
+- !private ["V10PerfectLib13PerfectServer", "DynamicLoader"]
+- !private ["V10PerfectLib13PerfectServer", "Log"]
+- !private ["V10PerfectLib13PerfectServer", "NetEvent"]
+- !private ["V10PerfectLib13PerfectServer", "PerfectServer"]
+- !private ["V10PerfectLib13PerfectServer", "Routing"]
+- ["V10PerfectLib13PerfectServer", "String"]
+- !private ["V10PerfectLib13PerfectServer", "ThrowSystemError"]
+- !private ["V10PerfectLib13PerfectServer", "getpwnam"]
+- ["V10PerfectLib13PerfectServer", "homeDir"]
+- ["V10PerfectLib13PerfectServer", "init"]
+- ["V10PerfectLib13PerfectServer", "initializeServices"]
+- !private ["V10PerfectLib13PerfectServer", "print"]
+- !private ["V10PerfectLib13PerfectServer", "serverPerfectLibraries"]
+- !private ["V10PerfectLib13PerfectServer", "setgid"]
+- !private ["V10PerfectLib13PerfectServer", "setuid"]
+- ["V10PerfectLib13PerfectServer", "switchTo"]
+- !private ["V10PerfectLib7Routing", "initialize"]
+- !private ["Ps10Streamable", "begins"]
+- !private ["Ps10Streamable", "ends"]
+- !private ["Ps10Streamable", "init"]
+- !private ["Ps10Strideable", "pointee"]
+- !private ["SS", "begins"]
+- !private ["SS", "deinit"]
+- !private ["SS", "ends"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "begins"]
+- !private ["Ps30StringInterpolationConvertible", "ends"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "begins"]
+- !private ["Ps24StringLiteralConvertible", "ends"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "begins"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "ends"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- !private ["Sp", "pointee"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "begins"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "ends"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "begins"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "ends"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "begins"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "ends"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "begins"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "ends"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["P10Foundation12_CFBridgable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation12_CFBridgable", "begins"]
+- !private ["P10Foundation12_CFBridgable", "ends"]
+- !private ["P10Foundation12_CFBridgable", "init"]
+- !private ["P10Foundation12_NSBridgable", "begins"]
+- !private ["P10Foundation12_NSBridgable", "ends"]
+- !private ["P10Foundation12_NSBridgable", "init"]
+- !private ["P10Foundation22_NSObjectRepresentable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation22_NSObjectRepresentable", "begins"]
+- !private ["P10Foundation22_NSObjectRepresentable", "ends"]
+- !private ["P10Foundation22_NSObjectRepresentable", "init"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "begins"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "ends"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "init"]
+- !private ["Ps8_Pointer", "pointee"]
+- !private ["Ps11_Strideable", "pointee"]
+- !private ["VSC6passwd", "pw_gid"]
+- !private ["VSC6passwd", "pw_uid"]
+depends-nominal:
+- !private "Ps9AnyObject"
+- !private "Sb"
+- !private "Ps7Boolean"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "P10Foundation10Bridgeable"
+- !private "Ps7CVarArg"
+- !private "Vs9Character"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "V10PerfectLib3Dir"
+- !private "Sd"
+- !private "V10PerfectLib13DynamicLoader"
+- !private "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps8Hashable"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- "P10PerfectLib15JSONConvertible"
+- !private "V10PerfectLib3Log"
+- !private "Ps10MirrorPath"
+- !private "C10PerfectNet8NetEvent"
+- "Ps21NilLiteralConvertible"
+- "Sq"
+- !private "Ps12OutputStream"
+- "V10PerfectLib13PerfectServer"
+- !private "V10PerfectLib7Routing"
+- !private "Ps10Streamable"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- !private "Sp"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "P10Foundation12_CFBridgable"
+- !private "P10Foundation12_NSBridgable"
+- !private "P10Foundation22_NSObjectRepresentable"
+- !private "P10Foundation21_ObjectTypeBridgeable"
+- !private "Ps8_Pointer"
+- !private "Ps11_Strideable"
+- !private "VSC6passwd"
+depends-dynamic-lookup:
+depends-external:
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/Visibility.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStdint.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/UnicodeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStddef.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/LibcShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeStubs.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RefCount.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/HeapObject.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/GlobalObjects.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/FoundationShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/module.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/module.map"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectNet.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/LinuxBridge.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/openssl.h"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectThread.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+interface-hash: "e11216321458d585c26eb043a1dd69c1"

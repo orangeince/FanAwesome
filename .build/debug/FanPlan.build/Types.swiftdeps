@@ -1,0 +1,499 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Update"
+- "Message"
+- "Chat"
+- "User"
+- "MessageEntity"
+- "Audio"
+- "Document"
+- "PhotoSize"
+- "Sticker"
+- "Video"
+- "Voice"
+- "Contact"
+- "Location"
+- "Venue"
+provides-nominal:
+- "V7FanPlan6Update"
+- "C7FanPlan7Message"
+- "V7FanPlan4Chat"
+- "V7FanPlan4User"
+- "V7FanPlan13MessageEntity"
+- "V7FanPlan5Audio"
+- "V7FanPlan8Document"
+- "V7FanPlan9PhotoSize"
+- "V7FanPlan7Sticker"
+- "V7FanPlan5Video"
+- "V7FanPlan5Voice"
+- "V7FanPlan7Contact"
+- "V7FanPlan8Location"
+- "V7FanPlan5Venue"
+provides-member:
+- ["V7FanPlan6Update", ""]
+- ["C7FanPlan7Message", ""]
+- ["V7FanPlan4Chat", ""]
+- ["V7FanPlan4User", ""]
+- ["V7FanPlan13MessageEntity", ""]
+- ["V7FanPlan5Audio", ""]
+- ["V7FanPlan8Document", ""]
+- ["V7FanPlan9PhotoSize", ""]
+- ["V7FanPlan7Sticker", ""]
+- ["V7FanPlan5Video", ""]
+- ["V7FanPlan5Voice", ""]
+- ["V7FanPlan7Contact", ""]
+- ["V7FanPlan8Location", ""]
+- ["V7FanPlan5Venue", ""]
+depends-top-level:
+- "Int"
+- "Video"
+- "Document"
+- "Bool"
+- "Audio"
+- "User"
+- "StringLiteralType"
+- "Sticker"
+- "String"
+- "Message"
+- "Contact"
+- "Location"
+- "MessageEntity"
+- "Double"
+- "Voice"
+- "PhotoSize"
+- "Update"
+- "Venue"
+- "Chat"
+depends-member:
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "audio"]
+- !private ["Ps9AnyObject", "caption"]
+- !private ["Ps9AnyObject", "channel_chat_created"]
+- !private ["Ps9AnyObject", "chat"]
+- !private ["Ps9AnyObject", "contact"]
+- !private ["Ps9AnyObject", "date"]
+- !private ["Ps9AnyObject", "delete_chat_photo"]
+- !private ["Ps9AnyObject", "document"]
+- !private ["Ps9AnyObject", "edit_date"]
+- !private ["Ps9AnyObject", "entities"]
+- !private ["Ps9AnyObject", "forward_date"]
+- !private ["Ps9AnyObject", "forward_from"]
+- !private ["Ps9AnyObject", "forward_from_chat"]
+- !private ["Ps9AnyObject", "from"]
+- !private ["Ps9AnyObject", "group_chat_created"]
+- !private ["Ps9AnyObject", "left_chat_member"]
+- !private ["Ps9AnyObject", "location"]
+- !private ["Ps9AnyObject", "message_id"]
+- !private ["Ps9AnyObject", "migrate_from_chat_id"]
+- !private ["Ps9AnyObject", "migrate_to_chat_id"]
+- !private ["Ps9AnyObject", "new_chat_member"]
+- !private ["Ps9AnyObject", "new_chat_photo"]
+- !private ["Ps9AnyObject", "new_chat_title"]
+- !private ["Ps9AnyObject", "photo"]
+- !private ["Ps9AnyObject", "pinned_message"]
+- !private ["Ps9AnyObject", "reply_to_message"]
+- !private ["Ps9AnyObject", "sticker"]
+- !private ["Ps9AnyObject", "supergroup_chat_created"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps9AnyObject", "venue"]
+- !private ["Ps9AnyObject", "video"]
+- !private ["Ps9AnyObject", "voice"]
+- ["Ps9AnyObject", ""]
+- ["V7FanPlan5Audio", "Int"]
+- ["V7FanPlan5Audio", "String"]
+- ["V7FanPlan5Audio", "duration"]
+- ["V7FanPlan5Audio", "file_id"]
+- ["V7FanPlan5Audio", "file_size"]
+- ["V7FanPlan5Audio", "init"]
+- ["V7FanPlan5Audio", "mime_type"]
+- ["V7FanPlan5Audio", "performer"]
+- ["V7FanPlan5Audio", "title"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["P10Foundation10Bridgeable", "init"]
+- !private ["P10Foundation10Bridgeable", "subscript"]
+- !private ["Vs9Character", "deinit"]
+- ["V7FanPlan4Chat", "Int"]
+- ["V7FanPlan4Chat", "String"]
+- ["V7FanPlan4Chat", "first_name"]
+- ["V7FanPlan4Chat", "id"]
+- ["V7FanPlan4Chat", "init"]
+- ["V7FanPlan4Chat", "last_name"]
+- ["V7FanPlan4Chat", "recipientIdentification"]
+- !private ["V7FanPlan4Chat", "recipientIdentification.storage"]
+- ["V7FanPlan4Chat", "title"]
+- ["V7FanPlan4Chat", "type"]
+- ["V7FanPlan4Chat", "username"]
+- !private ["Ps10Collection", "Index"]
+- !private ["Ps10Collection", "Iterator"]
+- !private ["Ps10Collection", "SubSequence"]
+- !private ["Ps10Collection", "_Element"]
+- !private ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "init"]
+- ["V7FanPlan7Contact", "Int"]
+- ["V7FanPlan7Contact", "String"]
+- ["V7FanPlan7Contact", "first_name"]
+- ["V7FanPlan7Contact", "init"]
+- ["V7FanPlan7Contact", "last_name"]
+- ["V7FanPlan7Contact", "phone_number"]
+- ["V7FanPlan7Contact", "user_id"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Vs10Dictionary", "init"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps28DictionaryLiteralConvertible", "init"]
+- !private ["Ps28DictionaryLiteralConvertible", "subscript"]
+- ["V7FanPlan8Document", "Int"]
+- ["V7FanPlan8Document", "PhotoSize"]
+- ["V7FanPlan8Document", "String"]
+- ["V7FanPlan8Document", "file_id"]
+- ["V7FanPlan8Document", "file_name"]
+- ["V7FanPlan8Document", "file_size"]
+- ["V7FanPlan8Document", "init"]
+- ["V7FanPlan8Document", "mime_type"]
+- ["V7FanPlan8Document", "thumb"]
+- !private ["Sd", "deinit"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps9Indexable", "Index"]
+- !private ["Ps9Indexable", "Iterator"]
+- !private ["Ps9Indexable", "SubSequence"]
+- !private ["Ps9Indexable", "_Element"]
+- !private ["Ps9Indexable", "init"]
+- !private ["Ps9Indexable", "subscript"]
+- !private ["Ps13IndexableBase", "Index"]
+- !private ["Ps13IndexableBase", "Iterator"]
+- !private ["Ps13IndexableBase", "SubSequence"]
+- !private ["Ps13IndexableBase", "_Element"]
+- !private ["Ps13IndexableBase", "init"]
+- !private ["Ps13IndexableBase", "subscript"]
+- !private ["Vs16IndexingIterator", "Element"]
+- !private ["Si", "deinit"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- !private ["Ps16IteratorProtocol", "Element"]
+- !private ["P10PerfectLib15JSONConvertible", "_getBuiltinLogicValue"]
+- !private ["P10PerfectLib15JSONConvertible", "init"]
+- !private ["P10PerfectLib15JSONConvertible", "subscript"]
+- ["V7FanPlan8Location", "Double"]
+- ["V7FanPlan8Location", "init"]
+- ["V7FanPlan8Location", "latitude"]
+- ["V7FanPlan8Location", "longitude"]
+- ["C7FanPlan7Message", "Audio"]
+- ["C7FanPlan7Message", "Bool"]
+- ["C7FanPlan7Message", "Chat"]
+- ["C7FanPlan7Message", "Contact"]
+- ["C7FanPlan7Message", "Document"]
+- ["C7FanPlan7Message", "Int"]
+- ["C7FanPlan7Message", "Location"]
+- ["C7FanPlan7Message", "Message"]
+- ["C7FanPlan7Message", "MessageEntity"]
+- ["C7FanPlan7Message", "PhotoSize"]
+- ["C7FanPlan7Message", "Sticker"]
+- ["C7FanPlan7Message", "String"]
+- ["C7FanPlan7Message", "User"]
+- ["C7FanPlan7Message", "Venue"]
+- ["C7FanPlan7Message", "Video"]
+- ["C7FanPlan7Message", "Voice"]
+- ["C7FanPlan7Message", "audio"]
+- ["C7FanPlan7Message", "caption"]
+- ["C7FanPlan7Message", "channel_chat_created"]
+- ["C7FanPlan7Message", "chat"]
+- ["C7FanPlan7Message", "contact"]
+- ["C7FanPlan7Message", "date"]
+- ["C7FanPlan7Message", "deinit"]
+- ["C7FanPlan7Message", "delete_chat_photo"]
+- ["C7FanPlan7Message", "document"]
+- ["C7FanPlan7Message", "edit_date"]
+- ["C7FanPlan7Message", "entities"]
+- ["C7FanPlan7Message", "forwardIdentification"]
+- !private ["C7FanPlan7Message", "forwardIdentification.storage"]
+- ["C7FanPlan7Message", "forward_date"]
+- ["C7FanPlan7Message", "forward_from"]
+- ["C7FanPlan7Message", "forward_from_chat"]
+- ["C7FanPlan7Message", "from"]
+- ["C7FanPlan7Message", "group_chat_created"]
+- ["C7FanPlan7Message", "init"]
+- ["C7FanPlan7Message", "left_chat_member"]
+- ["C7FanPlan7Message", "location"]
+- ["C7FanPlan7Message", "message_id"]
+- ["C7FanPlan7Message", "migrate_from_chat_id"]
+- ["C7FanPlan7Message", "migrate_to_chat_id"]
+- ["C7FanPlan7Message", "new_chat_member"]
+- ["C7FanPlan7Message", "new_chat_photo"]
+- ["C7FanPlan7Message", "new_chat_title"]
+- ["C7FanPlan7Message", "photo"]
+- ["C7FanPlan7Message", "pinned_message"]
+- ["C7FanPlan7Message", "recipientIdentification"]
+- !private ["C7FanPlan7Message", "recipientIdentification.storage"]
+- ["C7FanPlan7Message", "reply_to_message"]
+- ["C7FanPlan7Message", "sticker"]
+- ["C7FanPlan7Message", "supergroup_chat_created"]
+- ["C7FanPlan7Message", "text"]
+- ["C7FanPlan7Message", "venue"]
+- ["C7FanPlan7Message", "video"]
+- ["C7FanPlan7Message", "voice"]
+- ["V7FanPlan13MessageEntity", "Int"]
+- ["V7FanPlan13MessageEntity", "String"]
+- ["V7FanPlan13MessageEntity", "init"]
+- ["V7FanPlan13MessageEntity", "length"]
+- ["V7FanPlan13MessageEntity", "offset"]
+- ["V7FanPlan13MessageEntity", "type"]
+- ["V7FanPlan13MessageEntity", "url"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Sq", "deinit"]
+- !private ["Ps12OutputStream", "init"]
+- ["V7FanPlan9PhotoSize", "Int"]
+- ["V7FanPlan9PhotoSize", "String"]
+- ["V7FanPlan9PhotoSize", "contentIdentification"]
+- ["V7FanPlan9PhotoSize", "file_id"]
+- ["V7FanPlan9PhotoSize", "file_size"]
+- ["V7FanPlan9PhotoSize", "height"]
+- ["V7FanPlan9PhotoSize", "init"]
+- ["V7FanPlan9PhotoSize", "method"]
+- ["V7FanPlan9PhotoSize", "width"]
+- !private ["P7FanPlan10Receivable", "String"]
+- !private ["P7FanPlan10Receivable", "audio"]
+- !private ["P7FanPlan10Receivable", "caption"]
+- !private ["P7FanPlan10Receivable", "channel_chat_created"]
+- !private ["P7FanPlan10Receivable", "chat"]
+- !private ["P7FanPlan10Receivable", "contact"]
+- !private ["P7FanPlan10Receivable", "date"]
+- !private ["P7FanPlan10Receivable", "delete_chat_photo"]
+- !private ["P7FanPlan10Receivable", "document"]
+- !private ["P7FanPlan10Receivable", "edit_date"]
+- !private ["P7FanPlan10Receivable", "entities"]
+- !private ["P7FanPlan10Receivable", "first_name"]
+- !private ["P7FanPlan10Receivable", "forward_date"]
+- !private ["P7FanPlan10Receivable", "forward_from"]
+- !private ["P7FanPlan10Receivable", "forward_from_chat"]
+- !private ["P7FanPlan10Receivable", "from"]
+- !private ["P7FanPlan10Receivable", "group_chat_created"]
+- !private ["P7FanPlan10Receivable", "id"]
+- !private ["P7FanPlan10Receivable", "last_name"]
+- !private ["P7FanPlan10Receivable", "left_chat_member"]
+- !private ["P7FanPlan10Receivable", "location"]
+- !private ["P7FanPlan10Receivable", "message_id"]
+- !private ["P7FanPlan10Receivable", "migrate_from_chat_id"]
+- !private ["P7FanPlan10Receivable", "migrate_to_chat_id"]
+- !private ["P7FanPlan10Receivable", "new_chat_member"]
+- !private ["P7FanPlan10Receivable", "new_chat_photo"]
+- !private ["P7FanPlan10Receivable", "new_chat_title"]
+- !private ["P7FanPlan10Receivable", "photo"]
+- !private ["P7FanPlan10Receivable", "pinned_message"]
+- !private ["P7FanPlan10Receivable", "reply_to_message"]
+- !private ["P7FanPlan10Receivable", "sticker"]
+- !private ["P7FanPlan10Receivable", "supergroup_chat_created"]
+- !private ["P7FanPlan10Receivable", "text"]
+- !private ["P7FanPlan10Receivable", "title"]
+- !private ["P7FanPlan10Receivable", "type"]
+- !private ["P7FanPlan10Receivable", "username"]
+- !private ["P7FanPlan10Receivable", "venue"]
+- !private ["P7FanPlan10Receivable", "video"]
+- !private ["P7FanPlan10Receivable", "voice"]
+- !private ["Ps8Sequence", "Element"]
+- !private ["Ps8Sequence", "Index"]
+- !private ["Ps8Sequence", "Iterator"]
+- !private ["Ps8Sequence", "SubSequence"]
+- !private ["Ps8Sequence", "_Element"]
+- !private ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Vs5Slice", "Index"]
+- !private ["Vs5Slice", "Iterator"]
+- !private ["Vs5Slice", "SubSequence"]
+- !private ["Vs5Slice", "_Element"]
+- ["V7FanPlan7Sticker", "Int"]
+- ["V7FanPlan7Sticker", "PhotoSize"]
+- ["V7FanPlan7Sticker", "String"]
+- ["V7FanPlan7Sticker", "contentIdentification"]
+- ["V7FanPlan7Sticker", "emoji"]
+- ["V7FanPlan7Sticker", "file_id"]
+- ["V7FanPlan7Sticker", "file_size"]
+- ["V7FanPlan7Sticker", "height"]
+- ["V7FanPlan7Sticker", "init"]
+- ["V7FanPlan7Sticker", "method"]
+- ["V7FanPlan7Sticker", "thumb"]
+- ["V7FanPlan7Sticker", "width"]
+- !private ["Ps10Streamable", "init"]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Su", "deinit"]
+- !private ["Vs6UInt16", "deinit"]
+- !private ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- ["V7FanPlan6Update", "Int"]
+- ["V7FanPlan6Update", "Message"]
+- ["V7FanPlan6Update", "edited_message"]
+- ["V7FanPlan6Update", "init"]
+- ["V7FanPlan6Update", "message"]
+- ["V7FanPlan6Update", "update_id"]
+- ["V7FanPlan4User", "Int"]
+- ["V7FanPlan4User", "String"]
+- ["V7FanPlan4User", "first_name"]
+- ["V7FanPlan4User", "id"]
+- ["V7FanPlan4User", "init"]
+- ["V7FanPlan4User", "last_name"]
+- ["V7FanPlan4User", "username"]
+- ["V7FanPlan5Venue", "Location"]
+- ["V7FanPlan5Venue", "String"]
+- ["V7FanPlan5Venue", "address"]
+- ["V7FanPlan5Venue", "foursquare_id"]
+- ["V7FanPlan5Venue", "init"]
+- ["V7FanPlan5Venue", "location"]
+- ["V7FanPlan5Venue", "title"]
+- ["V7FanPlan5Video", "Int"]
+- ["V7FanPlan5Video", "PhotoSize"]
+- ["V7FanPlan5Video", "String"]
+- ["V7FanPlan5Video", "duration"]
+- ["V7FanPlan5Video", "file_id"]
+- ["V7FanPlan5Video", "file_size"]
+- ["V7FanPlan5Video", "height"]
+- ["V7FanPlan5Video", "init"]
+- ["V7FanPlan5Video", "mime_type"]
+- ["V7FanPlan5Video", "thumb"]
+- ["V7FanPlan5Video", "width"]
+- ["V7FanPlan5Voice", "Int"]
+- ["V7FanPlan5Voice", "String"]
+- ["V7FanPlan5Voice", "contentIdentification"]
+- ["V7FanPlan5Voice", "duration"]
+- ["V7FanPlan5Voice", "file_id"]
+- ["V7FanPlan5Voice", "file_size"]
+- ["V7FanPlan5Voice", "init"]
+- ["V7FanPlan5Voice", "method"]
+- ["V7FanPlan5Voice", "mime_type"]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- !private ["P10Foundation12_CFBridgable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation12_CFBridgable", "init"]
+- !private ["P10Foundation12_CFBridgable", "subscript"]
+- !private ["P10Foundation12_NSBridgable", "init"]
+- !private ["P10Foundation12_NSBridgable", "subscript"]
+- !private ["P10Foundation22_NSObjectRepresentable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation22_NSObjectRepresentable", "init"]
+- !private ["P10Foundation22_NSObjectRepresentable", "subscript"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "_getBuiltinLogicValue"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "init"]
+- !private ["P10Foundation21_ObjectTypeBridgeable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- "V7FanPlan5Audio"
+- !private "Sb"
+- !private "Ps7Boolean"
+- !private "Ps25BooleanLiteralConvertible"
+- !private "P10Foundation10Bridgeable"
+- !private "Vs9Character"
+- "V7FanPlan4Chat"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- "V7FanPlan7Contact"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps28DictionaryLiteralConvertible"
+- "V7FanPlan8Document"
+- !private "Sd"
+- !private "Ps9Equatable"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- !private "Ps8Hashable"
+- !private "Ps9Indexable"
+- !private "Ps13IndexableBase"
+- !private "Vs16IndexingIterator"
+- !private "Si"
+- !private "Vs5Int16"
+- !private "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- !private "Ps16IteratorProtocol"
+- !private "P10PerfectLib15JSONConvertible"
+- "V7FanPlan8Location"
+- "C7FanPlan7Message"
+- "V7FanPlan13MessageEntity"
+- !private "Ps10MirrorPath"
+- !private "Sq"
+- !private "Ps12OutputStream"
+- "V7FanPlan9PhotoSize"
+- !private "P7FanPlan10Receivable"
+- !private "Ps8Sequence"
+- !private "Vs5Slice"
+- "V7FanPlan7Sticker"
+- !private "Ps10Streamable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Su"
+- !private "Vs6UInt16"
+- !private "Vs6UInt32"
+- !private "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- "V7FanPlan6Update"
+- "V7FanPlan4User"
+- "V7FanPlan5Venue"
+- "V7FanPlan5Video"
+- "V7FanPlan5Voice"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- !private "P10Foundation12_CFBridgable"
+- !private "P10Foundation12_NSBridgable"
+- !private "P10Foundation22_NSObjectRepresentable"
+- !private "P10Foundation21_ObjectTypeBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/Visibility.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStdint.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/UnicodeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStddef.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/LibcShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeStubs.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RefCount.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/HeapObject.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/GlobalObjects.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/FoundationShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/module.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/module.map"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectLib.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Foundation.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Glibc.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/LinuxBridge.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/openssl.h"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectNet.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectThread.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectCURL.swiftmodule"
+interface-hash: "cd61960db88035e0ef751ef83fb70b36"

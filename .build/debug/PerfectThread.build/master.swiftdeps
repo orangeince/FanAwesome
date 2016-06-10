@@ -1,0 +1,6 @@
+version: "Swift version 3.0-dev (LLVM cb08d1dbbd, Clang 383859a9c4, Swift 9e8266aaeb)"
+options: "977586939a74d1a0b8d4c4e58a7883d0"
+build_time: [518874913, 639523000]
+inputs:
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectThread-0.4.0/Sources/Threading.swift": [518874891, 0]
+  "/orange_pro/swift_dev/Fanplan/Packages/PerfectThread-0.4.0/Sources/ThreadQueue.swift": [518874891, 0]

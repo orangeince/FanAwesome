@@ -1,0 +1,359 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "errno"
+- "SocketType"
+- "invalidSocket"
+- "SocketFileDescriptor"
+- "BytesSwappingUnsignedInteger"
+- "PerfectNetError"
+- "ThrowNetworkError"
+provides-nominal:
+- "V10PerfectNet20SocketFileDescriptor"
+- "P10PerfectNet28BytesSwappingUnsignedInteger"
+- "Vs6UInt16"
+- "Vs6UInt32"
+- "Vs6UInt64"
+- "O10PerfectNet15PerfectNetError"
+provides-member:
+- ["V10PerfectNet20SocketFileDescriptor", ""]
+- ["Ps15UnsignedInteger", ""]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", ""]
+- ["Vs6UInt16", ""]
+- ["Vs6UInt32", ""]
+- ["Vs6UInt64", ""]
+- ["O10PerfectNet15PerfectNetError", ""]
+- ["Ps15UnsignedInteger", "hostIsLittleEndian"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "hostToNet"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "netToHost"]
+depends-top-level:
+- !private "setsockopt"
+- !private "=="
+- "IntegerLiteralType"
+- !private "F_GETFL"
+- "BytesSwappingUnsignedInteger"
+- !private "linux_fcntl_get"
+- !private "sizeof"
+- !private "+"
+- !private "|"
+- !private ">="
+- "Bool"
+- !private "strerror"
+- "UInt64"
+- !private "O_NONBLOCK"
+- "FloatLiteralType"
+- "SocketFileDescriptor"
+- !private "SO_REUSEADDR"
+- "UInt32"
+- "SocketType"
+- !private "socklen_t"
+- !private "linux_fcntl_set"
+- "ErrorProtocol"
+- !private "SOL_SOCKET"
+- "invalidSocket"
+- "UnsignedInteger"
+- "ThrowNetworkError"
+- !private "UnicodeScalarType"
+- !private "F_SETFL"
+- "Int"
+- !private "AF_UNSPEC"
+- "UInt16"
+- "String"
+- "PerfectNetError"
+- !private "!="
+- "Int32"
+- "StringLiteralType"
+- "errno"
+- !private "linux_errno"
+depends-member:
+- ["Ps17BitwiseOperations", "Bool"]
+- ["Ps17BitwiseOperations", "Self"]
+- ["Ps17BitwiseOperations", "byteSwapped"]
+- !private ["Ps17BitwiseOperations", "hostIsLittleEndian"]
+- ["Ps17BitwiseOperations", "init"]
+- !private ["Ps17BitwiseOperations", "littleEndian"]
+- ["Ps17BitwiseOperations", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["Sb", "deinit"]
+- !private ["Ps7Boolean", "_getBuiltinLogicValue"]
+- !private ["Ps25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "Self"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "byteSwapped"]
+- !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "hostIsLittleEndian"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "hostToNet"]
+- !private ["P10PerfectNet28BytesSwappingUnsignedInteger", "init"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", "netToHost"]
+- ["P10PerfectNet28BytesSwappingUnsignedInteger", ""]
+- ["Ps7CVarArg", "byteSwapped"]
+- ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "littleEndian"]
+- !private ["Vs9Character", "deinit"]
+- ["Ps10Comparable", "Bool"]
+- ["Ps10Comparable", "Self"]
+- ["Ps10Comparable", "byteSwapped"]
+- !private ["Ps10Comparable", "hostIsLittleEndian"]
+- ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "littleEndian"]
+- ["Ps10Comparable", ""]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- ["Ps29CustomPlaygroundQuickLookable", "byteSwapped"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "littleEndian"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- ["Ps17CustomReflectable", "byteSwapped"]
+- ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "littleEndian"]
+- ["Ps23CustomStringConvertible", "Bool"]
+- ["Ps23CustomStringConvertible", "Self"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- ["Ps23CustomStringConvertible", "byteSwapped"]
+- !private ["Ps23CustomStringConvertible", "hostIsLittleEndian"]
+- ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "littleEndian"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Sd", "deinit"]
+- ["Ps9Equatable", "Bool"]
+- ["Ps9Equatable", "Self"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- ["Ps9Equatable", "byteSwapped"]
+- !private ["Ps9Equatable", "hostIsLittleEndian"]
+- ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "littleEndian"]
+- ["Ps9Equatable", ""]
+- !private ["Ps13ErrorProtocol", "NetworkError"]
+- ["Ps13ErrorProtocol", "_code"]
+- ["Ps13ErrorProtocol", "_domain"]
+- ["Ps13ErrorProtocol", ""]
+- !private ["Ps41ExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["Sf", "deinit"]
+- ["Ps8Hashable", "Bool"]
+- ["Ps8Hashable", "Self"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- ["Ps8Hashable", "byteSwapped"]
+- !private ["Ps8Hashable", "hostIsLittleEndian"]
+- ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "littleEndian"]
+- ["Ps8Hashable", ""]
+- !private ["Si", "deinit"]
+- !private ["Si", "littleEndian"]
+- !private ["Vs5Int16", "deinit"]
+- !private ["Vs5Int32", "deinit"]
+- ["Vs5Int32", "init"]
+- !private ["Vs5Int64", "deinit"]
+- !private ["Vs4Int8", "deinit"]
+- ["Ps7Integer", "Bool"]
+- ["Ps7Integer", "Self"]
+- ["Ps7Integer", "byteSwapped"]
+- !private ["Ps7Integer", "hostIsLittleEndian"]
+- ["Ps7Integer", "init"]
+- !private ["Ps7Integer", "littleEndian"]
+- ["Ps7Integer", ""]
+- ["Ps17IntegerArithmetic", "Bool"]
+- ["Ps17IntegerArithmetic", "Self"]
+- ["Ps17IntegerArithmetic", "byteSwapped"]
+- !private ["Ps17IntegerArithmetic", "hostIsLittleEndian"]
+- ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps17IntegerArithmetic", "littleEndian"]
+- ["Ps17IntegerArithmetic", ""]
+- ["Ps25IntegerLiteralConvertible", "Bool"]
+- ["Ps25IntegerLiteralConvertible", "Self"]
+- ["Ps25IntegerLiteralConvertible", "byteSwapped"]
+- !private ["Ps25IntegerLiteralConvertible", "hostIsLittleEndian"]
+- ["Ps25IntegerLiteralConvertible", "init"]
+- !private ["Ps25IntegerLiteralConvertible", "littleEndian"]
+- ["Ps25IntegerLiteralConvertible", ""]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "littleEndian"]
+- !private ["Ps12OutputStream", "init"]
+- ["O10PerfectNet15PerfectNetError", "Int32"]
+- ["O10PerfectNet15PerfectNetError", "NetworkError"]
+- ["O10PerfectNet15PerfectNetError", "String"]
+- ["O10PerfectNet15PerfectNetError", "_code"]
+- ["O10PerfectNet15PerfectNetError", "_domain"]
+- ["O10PerfectNet15PerfectNetError", "deinit"]
+- ["Ps13SignedInteger", "init"]
+- !private ["Ps13SignedInteger", "littleEndian"]
+- ["Ps12SignedNumber", "init"]
+- !private ["Ps12SignedNumber", "littleEndian"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "AF_UNSPEC"]
+- ["V10PerfectNet20SocketFileDescriptor", "Bool"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "F_GETFL"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "F_SETFL"]
+- ["V10PerfectNet20SocketFileDescriptor", "Int32"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "O_NONBLOCK"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "SOL_SOCKET"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "SO_REUSEADDR"]
+- ["V10PerfectNet20SocketFileDescriptor", "SocketType"]
+- ["V10PerfectNet20SocketFileDescriptor", "family"]
+- ["V10PerfectNet20SocketFileDescriptor", "fd"]
+- ["V10PerfectNet20SocketFileDescriptor", "init"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "invalidSocket"]
+- ["V10PerfectNet20SocketFileDescriptor", "isValid"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "linux_fcntl_get"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "linux_fcntl_set"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "setsockopt"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "sizeof"]
+- !private ["V10PerfectNet20SocketFileDescriptor", "socklen_t"]
+- ["V10PerfectNet20SocketFileDescriptor", "switchToNBIO"]
+- !private ["Ps10Streamable", "init"]
+- ["Ps10Strideable", "Bool"]
+- ["Ps10Strideable", "Self"]
+- ["Ps10Strideable", "byteSwapped"]
+- !private ["Ps10Strideable", "hostIsLittleEndian"]
+- ["Ps10Strideable", "init"]
+- !private ["Ps10Strideable", "littleEndian"]
+- ["Ps10Strideable", ""]
+- !private ["SS", "init"]
+- !private ["Ps30StringInterpolationConvertible", "init"]
+- !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["Su", "deinit"]
+- ["Vs6UInt16", "byteSwapped"]
+- ["Vs6UInt16", "deinit"]
+- ["Vs6UInt32", "byteSwapped"]
+- ["Vs6UInt32", "deinit"]
+- !private ["Vs6UInt32", "init"]
+- ["Vs6UInt64", "byteSwapped"]
+- ["Vs6UInt64", "deinit"]
+- !private ["Vs5UInt8", "deinit"]
+- !private ["Sc", "deinit"]
+- !private ["Ps31UnicodeScalarLiteralConvertible", "init"]
+- ["Ps15UnsignedInteger", "Bool"]
+- ["Ps15UnsignedInteger", "Self"]
+- ["Ps15UnsignedInteger", "byteSwapped"]
+- ["Ps15UnsignedInteger", "hostIsLittleEndian"]
+- !private ["Ps15UnsignedInteger", "init"]
+- ["Ps15UnsignedInteger", ""]
+- !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "Bool"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "Self"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "byteSwapped"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "hostIsLittleEndian"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", "init"]
+- !private ["Ps33_BuiltinIntegerLiteralConvertible", "littleEndian"]
+- ["Ps33_BuiltinIntegerLiteralConvertible", ""]
+- !private ["Ps32_BuiltinStringLiteralConvertible", "init"]
+- !private ["Ps37_BuiltinUTF16StringLiteralConvertible", "init"]
+- !private ["Ps39_BuiltinUnicodeScalarLiteralConvertible", "init"]
+- ["Ps15_CVarArgAligned", "byteSwapped"]
+- ["Ps28_DisallowMixedSignArithmetic", "Bool"]
+- ["Ps28_DisallowMixedSignArithmetic", "Self"]
+- ["Ps28_DisallowMixedSignArithmetic", "byteSwapped"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "hostIsLittleEndian"]
+- !private ["Ps28_DisallowMixedSignArithmetic", "init"]
+- ["Ps28_DisallowMixedSignArithmetic", ""]
+- ["Ps14_Incrementable", "Bool"]
+- ["Ps14_Incrementable", "Self"]
+- ["Ps14_Incrementable", "byteSwapped"]
+- !private ["Ps14_Incrementable", "hostIsLittleEndian"]
+- ["Ps14_Incrementable", "init"]
+- !private ["Ps14_Incrementable", "littleEndian"]
+- ["Ps14_Incrementable", ""]
+- ["Ps8_Integer", "Bool"]
+- ["Ps8_Integer", "Self"]
+- ["Ps8_Integer", "byteSwapped"]
+- !private ["Ps8_Integer", "hostIsLittleEndian"]
+- ["Ps8_Integer", "init"]
+- !private ["Ps8_Integer", "littleEndian"]
+- ["Ps8_Integer", ""]
+- ["Ps18_IntegerArithmetic", "Bool"]
+- ["Ps18_IntegerArithmetic", "Self"]
+- ["Ps18_IntegerArithmetic", "byteSwapped"]
+- !private ["Ps18_IntegerArithmetic", "hostIsLittleEndian"]
+- ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps18_IntegerArithmetic", "littleEndian"]
+- ["Ps18_IntegerArithmetic", ""]
+- ["Ps14_SignedInteger", "init"]
+- !private ["Ps14_SignedInteger", "littleEndian"]
+- ["Ps11_Strideable", "Bool"]
+- ["Ps11_Strideable", "Self"]
+- ["Ps11_Strideable", "byteSwapped"]
+- !private ["Ps11_Strideable", "hostIsLittleEndian"]
+- ["Ps11_Strideable", "init"]
+- !private ["Ps11_Strideable", "littleEndian"]
+- ["Ps11_Strideable", ""]
+- ["Ps14_StringElement", "byteSwapped"]
+depends-nominal:
+- "Ps17BitwiseOperations"
+- !private "Sb"
+- !private "Ps7Boolean"
+- !private "Ps25BooleanLiteralConvertible"
+- "P10PerfectNet28BytesSwappingUnsignedInteger"
+- "Ps7CVarArg"
+- !private "Vs9Character"
+- "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- !private "Sd"
+- "Ps9Equatable"
+- "Ps13ErrorProtocol"
+- !private "Ps41ExtendedGraphemeClusterLiteralConvertible"
+- !private "Sf"
+- "Ps8Hashable"
+- !private "Si"
+- !private "Vs5Int16"
+- "Vs5Int32"
+- !private "Vs5Int64"
+- !private "Vs4Int8"
+- "Ps7Integer"
+- "Ps17IntegerArithmetic"
+- "Ps25IntegerLiteralConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps12OutputStream"
+- "O10PerfectNet15PerfectNetError"
+- "Ps13SignedInteger"
+- "Ps12SignedNumber"
+- "V10PerfectNet20SocketFileDescriptor"
+- !private "Ps10Streamable"
+- "Ps10Strideable"
+- !private "SS"
+- !private "Ps30StringInterpolationConvertible"
+- !private "Ps24StringLiteralConvertible"
+- !private "Su"
+- "Vs6UInt16"
+- "Vs6UInt32"
+- "Vs6UInt64"
+- !private "Vs5UInt8"
+- !private "Sc"
+- !private "Ps31UnicodeScalarLiteralConvertible"
+- "Ps15UnsignedInteger"
+- !private "Ps33_BuiltinBooleanLiteralConvertible"
+- !private "Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible"
+- "Ps33_BuiltinIntegerLiteralConvertible"
+- !private "Ps32_BuiltinStringLiteralConvertible"
+- !private "Ps37_BuiltinUTF16StringLiteralConvertible"
+- !private "Ps39_BuiltinUnicodeScalarLiteralConvertible"
+- "Ps15_CVarArgAligned"
+- "Ps28_DisallowMixedSignArithmetic"
+- "Ps14_Incrementable"
+- "Ps8_Integer"
+- "Ps18_IntegerArithmetic"
+- "Ps14_SignedInteger"
+- "Ps11_Strideable"
+- "Ps14_StringElement"
+depends-dynamic-lookup:
+depends-external:
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/Swift.swiftmodule"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/Visibility.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStdint.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/UnicodeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/SwiftStddef.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/LibcShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeStubs.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RuntimeShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/RefCount.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/HeapObject.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/GlobalObjects.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/FoundationShims.h"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/CoreFoundationShims.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/module.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/glibc.modulemap"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/shims/module.map"
+- "/orange_pro/swift_dev/swift/usr/lib/swift/linux/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/.build/debug/PerfectThread.swiftmodule"
+- "/orange_pro/swift_dev/Fanplan/Packages/LinuxBridge-0.4.0/LinuxBridge.h"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/module.modulemap"
+- "/orange_pro/swift_dev/Fanplan/Packages/OpenSSL-0.3.0/openssl.h"
+interface-hash: "bac004792b9be46dc6221298646910a9"
