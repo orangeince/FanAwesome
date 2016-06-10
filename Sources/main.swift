@@ -57,7 +57,8 @@ Routing.Routes[.Post, "/fanplan"] = {
         print("postJson: \(postJson)")        
         if let postJson = postJson as? [String : Any] {
             if let text = postJson["text"] as? String, userName = postJson["user_name"] as? String {
-                let responseString = FanPlanHandler.handleFanPlanWith(commandStr: text, userName: userName)
+                var responseString = FanPlanHandler.handleFanPlanWith(commandStr: text, userName: userName)
+                responseString = "{\"text\": \"\(responseString)\"}"
                 response.appendBody(string: responseString)
             }
         }
