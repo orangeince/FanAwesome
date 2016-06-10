@@ -157,9 +157,13 @@ var commands: [FanPlanCommand] = []
 var others: [String] = []
 var isHelpOthers = false
 var responseStr = ""
+let commandHelpStr = "智能晚饭君的指南"
 
 class FanPlanHandler {
     static func handleFanPlanWith(commandStr: String, userName: String) -> String {
+        if commandStr == "fanplan" {
+            return commandHelpStr
+        }
         let strs = explodedString(str: commandStr, bySeparator: " ")
         for commandStr in strs {
             let cmd = CommandMode(commandStr: commandStr)
