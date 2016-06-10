@@ -56,7 +56,9 @@ Routing.Routes[.Post, "/fanplan"] = {
         print("postJson: \(postJson)")        
         if let text = postJson?["text"] as? String {
             response.appendBody(string: "{text: \"received: \(text)\"}")
-	}
+	    }
+    } else {
+        response.appendBody(string: "{error: \"Invaild params\"}")        
     }
 
 }
