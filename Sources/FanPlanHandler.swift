@@ -48,6 +48,22 @@ func explodedString(str: String, bySeparator: Character) -> [String] {
     return str.characters.split{ $0 == bySeparator }.map{ String($0) }
 }
 
+func getSubStringAfterFirstCh(_ str: String) -> String {
+    if str.isEmpty || str.characters.count == 1 {
+        return ""
+    }
+    return str.substring(from: str.index(after: str.startIndex))
+}
+
+func splitCommandStr(str: String) -> (Int, String) {
+    if str.isEmpty {
+        return (0, "")
+    }
+    let signStr = str.characters.first!
+    return (signStr == "-" ? -1, 1, getSubStringAfterFirstCh(str))
+}
+
+
 enum FanPlanCommandType {
     case Week
     case WeekDay
@@ -60,44 +76,46 @@ enum FanPlanCommandType {
     var checkPattern: String {
         switch self {
         case .Week:
-            return "(\\+\\+)|(\\-\\-)"
+            return "^(\\+\\+)|(\\-\\-)$"
         case .WeekDay:
-            return "\\+|\\-[1-5]"
+            return "^\\+|\\-[1-5]$"
         case .WeekDayError:
-            return "\\+|\\-(0|[6-9])(\\d)*"
+            return "^\\+|\\-(0|[6-9])(\\d)*$"
         case .OffsetDay:
-            return "(今天)|(明天)|(后天)|(大后天)|(大大后天)|(大大大后天)"
+            return "^\\+|\\-(今天)|(明天)|(后天)|(大后天)|(大大后天)$"
         case .OffsetDayError:
-            return "(昨天)|((大)*前天)|(大(4,)后天)"
+            return "^\\+|\\-(昨天)|((大)*前天)|(大(3,)后天)$"
         case .ExplicitDay:
-            return "([1-9]|(0[1-9])|(1[0-2])).([1-9]|([1-2][0-9])|(3[0-1]))"
+            return "^\\+|\\-([1-9]|(0[1-9])|(1[0-2])).([1-9]|([1-2][0-9])|(3[0-1]))$"
         case .ExplicitDayError:
-            return "(\\d+).(\\d+)"
+            return "^\\+|\\-(\\d+).(\\d+)$"
         }
     }
     static func getFanPlanCommandTypeAndConstantFrom(str: String) -> (FanPlanCommandType, Int)? {
-        print("getFanPlanCommandTypeAndConstantFrom ing...")
         if str =~ Week.checkPattern {
-            return (Week, 0)
+            return (Week, str == "++" ? 0 : -1)
         } else if str =~ WeekDay.checkPattern {
-            let n = Int(str.substring(from: str.index(after: str.startIndex)))!
+            let n = Int(str)
             return (WeekDay, n)
         } else if str =~ WeekDayError.checkPattern {
-            let n = Int(str.substring(from: str.index(after: str.startIndex)))!
+            let n = Int(str)
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
-            let n = offsetDayDict[str]!
-            return (OffsetDay, n)
+            let (multiplier, value) = splitCommandStr(str)
+            let n = offsetDayDict[value]!
+            return (OffsetDay, multiplier * n)
         } else if str =~ OffsetDayError.checkPattern {
+            let (multiplier, value) = splitCommandStr(str)
             let n = str.characters.contains("后") ? 0 : -1
-            return (OffsetDayError, n)
+            return (OffsetDayError, multiplier * n)
         } else if str =~ ExplicitDay.checkPattern {
-            let nums = explodedString(str: str, bySeparator: ".")
+            let (multiplier, value) = splitCommandStr(str)
+            let nums = explodedString(str: value, bySeparator: ".")
             var n = 0
             if nums.count == 2 {
                 n = Int(nums[0])! * 100 + Int(nums[1])!
             }
-            return (ExplicitDay, n)
+            return (ExplicitDay, multiplier * n)
         } else if str =~ ExplicitDayError.checkPattern {
             return (ExplicitDayError, 0)
         } else {
