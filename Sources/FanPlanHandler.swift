@@ -14,7 +14,7 @@ struct RegexHelper {
         let matchedCount = regex.numberOfMatches(in: input,
                                             options: [],
                                             range: NSMakeRange(0, input.utf16.count))
-        print("matchedCount: \(matchedCount)")
+        print("input: \(input), matchedCount: \(matchedCount)")
         return matchedCount > 0
     }
 }
