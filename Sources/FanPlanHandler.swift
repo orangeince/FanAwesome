@@ -55,12 +55,12 @@ func getSubStringAfterFirstCh(_ str: String) -> String {
     return str.substring(from: str.index(after: str.startIndex))
 }
 
-func splitCommandStr(str: String) -> (Int, String) {
+func splitCommandStr(_ str: String) -> (Int, String) {
     if str.isEmpty {
         return (0, "")
     }
     let signStr = str.characters.first!
-    return (signStr == "-" ? -1, 1, getSubStringAfterFirstCh(str))
+    return (signStr == "-" ? -1 : 1, getSubStringAfterFirstCh(str))
 }
 
 
@@ -95,10 +95,10 @@ enum FanPlanCommandType {
         if str =~ Week.checkPattern {
             return (Week, str == "++" ? 0 : -1)
         } else if str =~ WeekDay.checkPattern {
-            let n = Int(str)
+            let n = Int(str)!
             return (WeekDay, n)
         } else if str =~ WeekDayError.checkPattern {
-            let n = Int(str)
+            let n = Int(str)!
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
             let (multiplier, value) = splitCommandStr(str)
