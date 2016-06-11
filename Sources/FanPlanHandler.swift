@@ -14,6 +14,7 @@ struct RegexHelper {
         let matchedCount = regex.numberOfMatches(in: input,
                                             options: [],
                                             range: NSMakeRange(0, input.utf16.count))
+        print("matchedCount: \(matchedCount)")
         return matchedCount > 0
     }
 }
@@ -25,8 +26,10 @@ precedence 130
 
 func =~(lhs: String, rhs: String) -> Bool {
     do {
+        print("begin match: lhs: \(lhs), rhs: \(rhs)")
         return try RegexHelper(rhs).match(input: lhs)
     } catch _ {
+        print("match catched exception")
         return false
     }
 }
