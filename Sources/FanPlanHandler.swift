@@ -7,7 +7,7 @@ struct RegexHelper {
     
     init(_ pattern: String) throws {
         try regex = NSRegularExpression(pattern: pattern,
-                                        options: NSRegularExpressionOptions.caseInsensitive)
+                                        options: [])
     }
     
     func match(input: String) -> Bool {
