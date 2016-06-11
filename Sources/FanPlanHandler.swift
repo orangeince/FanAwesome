@@ -102,6 +102,7 @@ enum FanPlanCommandType {
             return (WeekDayError, n)
         } else if str =~ OffsetDay.checkPattern {
             let (multiplier, value) = splitCommandStr(str)
+            print("multiplier: \(multiplier), value:\(value)")
             let n = offsetDayDict[value]!
             return (OffsetDay, multiplier * n)
         } else if str =~ OffsetDayError.checkPattern {
