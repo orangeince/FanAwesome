@@ -196,7 +196,7 @@ class FanPlanHandler {
             for cmd in commands {
                 let (success, report) = cmd.executedReport(user: other)
                 if !success {
-                    responseStr = "命令解析失败，请参考命令手册输入正确的命令。输入`fanplan`查看命令手册"
+                    responseStr = report
                     break
                 } else {
                     responseStr += report
