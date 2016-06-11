@@ -11,6 +11,7 @@ struct RegexHelper {
     }
     
     func match(input: String) -> Bool {
+        print("match begin")
         let matchedCount = regex.numberOfMatches(in: input,
                                             options: [],
                                             range: NSMakeRange(0, input.utf16.count))
