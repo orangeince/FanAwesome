@@ -66,15 +66,15 @@ enum FanPlanCommandType {
         case .Week:
             return "(\\+\\+)|(\\-\\-)"
         case .WeekDay:
-            return "+|-[1-5]"
+            return "\\+|\\-[1-5]"
         case .WeekDayError:
-            return "+|-(0|[6-9])(\\d)*"
+            return "\\+|\\-(0|[6-9])(\\d)*"
         case .OffsetDay:
-            return "今天|明天|后天|大后天|大大后天|大大大后天"
+            return "(今天)|(明天)|(后天)|(大后天)|(大大后天)|(大大大后天)"
         case .OffsetDayError:
-            return "昨天|(大)*前天|大(4,)后天"
+            return "(昨天)|((大)*前天)|(大(4,)后天)"
         case .ExplicitDay:
-            return "([1-9]|0[1-9]|1[0-2]).([1-9]|[1-2][0-9]|3[0-1])"
+            return "([1-9]|(0[1-9])|(1[0-2])).([1-9]|([1-2][0-9])|(3[0-1]))"
         case .ExplicitDayError:
             return "(\\d+).(\\d+)"
         }
