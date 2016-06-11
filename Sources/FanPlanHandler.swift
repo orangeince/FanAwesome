@@ -63,7 +63,7 @@ enum FanPlanCommandType {
     var checkPattern: String {
         switch self {
         case .Week:
-            return "++|--"
+            return "++"
         case .WeekDay:
             return "+|-[1-5]"
         case .WeekDayError:
