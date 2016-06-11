@@ -52,7 +52,9 @@ func getSubStringAfterFirstCh(_ str: String) -> String {
     if str.isEmpty || str.characters.count == 1 {
         return ""
     }
-    return str.substring(from: str.index(after: str.startIndex))
+    var chs = str.characters
+    chs.removeFirst()
+    return String(chs)
 }
 
 func splitCommandStr(_ str: String) -> (Int, String) {
