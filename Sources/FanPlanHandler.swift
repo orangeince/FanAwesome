@@ -6,6 +6,7 @@ struct RegexHelper {
     let regex: NSRegularExpression
     
     init(_ pattern: String) throws {
+        print("regx init: pattern is \(pattern)")
         try regex = NSRegularExpression(pattern: pattern,
                                         options: [])
     }
