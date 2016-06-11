@@ -105,9 +105,9 @@ enum FanPlanCommandType {
             let n = offsetDayDict[value]!
             return (OffsetDay, multiplier * n)
         } else if str =~ OffsetDayError.checkPattern {
-            let (multiplier, value) = splitCommandStr(str)
+            //let (multiplier, value) = splitCommandStr(str)
             let n = str.characters.contains("后") ? 0 : -1
-            return (OffsetDayError, multiplier * n)
+            return (OffsetDayError,  n)
         } else if str =~ ExplicitDay.checkPattern {
             let (multiplier, value) = splitCommandStr(str)
             let nums = explodedString(str: value, bySeparator: ".")
