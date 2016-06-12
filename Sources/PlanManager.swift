@@ -4,7 +4,7 @@ import PerfectLib
 struct PlanManager {
     var planDict: [String: Any] 
     init?() {
-        guard let planFile = try? File(fd: "./plan.config", .readWrite) else {
+        guard let planFile = try? File("./plan.config", fd: .readWrite) else {
             print("read file failed..")
             return nil
         }
