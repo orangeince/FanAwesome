@@ -141,7 +141,11 @@ struct FanPlanCommand {
     func executedReport(user: String) -> (Bool, String) {
         var success = true
         var report = ""
-        print(type)
+        if let planManager = PlanManager() {
+            print(planManager.planDict)
+        } else {
+            print("planManager initial failed...")
+        }
         switch type {
         case .Week:
             if constant < 0 {
