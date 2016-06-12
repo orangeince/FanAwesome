@@ -208,6 +208,11 @@ class FanPlanHandler {
         if commands.isEmpty {
             return "命令解析失败，请参考命令手册输入正确的命令。输入`fanplan`查看命令手册"
         }
+        if isHelpOthers {
+            if others.isEmpty {
+                return "请输入需要帮助的人的姓名哦"
+            }
+        }
         if others.isEmpty {
             others.append(userName)
         }
