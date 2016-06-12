@@ -139,9 +139,9 @@ struct FanPlanCommand {
     }
     
     func executedReport(user: String) -> (Bool, String) {
-        //let theKey = user + "-plan"
         var success = true
         var report = ""
+        print(type)
         switch type {
         case .Week:
             if constant < 0 {
@@ -150,6 +150,7 @@ struct FanPlanCommand {
 
             }
         case .ExplicitDayError:
+        print("type check explicitdayerror!")
             success = false
             report = "指定的日期格式不对"
         default:
