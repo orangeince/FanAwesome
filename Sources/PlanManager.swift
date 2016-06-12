@@ -6,11 +6,11 @@ struct PlanManager {
     init?() {
         let planFile = File("./plan.config")
         print("plan path: \(planFile.path)")
-        guard let _ = try? planFile.openWrite() else {
+        guard let _ = try? planFile.open(.readWrite) else {
             print("open file failed..")
             return nil
         }
-        guard var configString = planFile.readString() else {
+        guard var configString = try? planFile.readString() else {
             print("read configstring failed...")
             return nil
         }
