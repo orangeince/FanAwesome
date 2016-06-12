@@ -18,7 +18,7 @@ struct PlanManager {
         if configString.isEmpty {
             configString = "{\"initialized\": true}"
         }
-        let var configJSON = try? configString.jsonDecode() else {
+        guard let configJSON = try? configString.jsonDecode() else {
             print("configString jsonDecoded failed....")
             return nil
         }
