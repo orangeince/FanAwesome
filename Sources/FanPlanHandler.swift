@@ -81,7 +81,7 @@ enum FanPlanCommandType {
         case .Week:
             return "^(\\+\\+)|(\\-\\-)$"
         case .WeekDay:
-            return "^\\+|\\-[1-5]$"
+            return "^(\\+|\\-)[1-5]$"
         case .WeekDayError:
             return "^\\+|\\-(0|[6-9])(\\d)*$"
         case .OffsetDay:
