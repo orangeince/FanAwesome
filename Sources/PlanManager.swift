@@ -4,8 +4,10 @@ import PerfectLib
 struct PlanManager {
     var planDict: [String: Any] 
     init?() {
-        guard let planFile = try? File("./plan.config", fd: File.OpenMode.readWrite.toMode) else {
-            print("read file failed..")
+        let planFile = File("./plan.config")
+        print("plan path: \(planFile.path)")
+        guard let _ = try? planFile.openWrite() else {
+            print("open file failed..")
             return nil
         }
         guard var configString = planFile.readString() else {
