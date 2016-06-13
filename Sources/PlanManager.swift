@@ -1,5 +1,6 @@
 import PerfectLib
 
+let occurBugReport = "哎呀，不好，我出bug啦 (⊙０⊙) "
 
 struct PlanManager {
     var planDict: [String: Any] 
@@ -55,20 +56,28 @@ struct PlanManager {
     mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
         print(planDict)
         if let _ = planDict[user] as? [String: Any] {
-            return (true, "你之前已经订过工作日的计划了哦（＾ω＾）")
+            return (true, "你之前已经订过工作日的计划了哦,我是不会忘哒（＾ω＾）")
         } else {
-            print("will add weekplan")
             planDict[user] = ["week": true]
             if save() {
                 return (true, "工作日点晚餐的工作就交给智能晚饭君啦 (ง •̀_•́)ง")
             } else {
-                return (false, "addWeekPlan failed....")
+                return (false, occurBugReport)
             }
         }
         //return notImplementReturn
     }
     func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
-
+        if let _ = planDict[user] as? [String: Any] {
+            planDict[user] = nil
+            if save() {
+                return (true, "已经帮你取消了工作日点饭计划，再来哦 ...(｡•ˇ‸ˇ•｡) ...")
+            } else {
+                return (false, occurBugReport)
+            }
+        } else {
+            return (true, "哎呦，你之前还没有制定过点饭计划哦 (oﾟωﾟo)")
+        }
         return notImplementReturn
     }
 }
