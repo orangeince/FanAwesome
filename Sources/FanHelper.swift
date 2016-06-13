@@ -15,7 +15,7 @@ class FlanHelper {
         let cUrl = CURL(url: "http://182.92.65.174:8181")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Content-Type: application/json")
         let tmpUrl = curl_easy_init()
-        let v = curl_easy_escape(tmpUrl, postString, 0)
+        let v = curl_easy_escape(tmpUrl, postString, 0)!
         _ = cUrl.setOption(CURLOPT_POSTFIELDS, v: v)
         cUrl.perform{
             code, header, body in
