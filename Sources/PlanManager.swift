@@ -29,6 +29,7 @@ struct PlanManager {
         }
         self.planDict = configDict
         planFile.close()
+        print(planDict)
     }
 
     var notImplementReturn: (Bool,String) {
@@ -51,7 +52,7 @@ struct PlanManager {
         return false
     }
 
-    func addWeekPlanFor(_ user: String) -> (Bool, String) {
+    mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
         print(planDict)
         if let _ = planDict[user] as? [String: Any] {
             return (true, "already add the same plan before!!!")
