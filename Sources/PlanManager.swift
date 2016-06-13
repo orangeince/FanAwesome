@@ -3,8 +3,9 @@ import PerfectLib
 
 struct PlanManager {
     var planDict: [String: Any] 
+    let planFile: File
     init?() {
-        let planFile = File("./plan.config")
+        planFile = File("./plan.config")
         print("plan path: \(planFile.path)")
         guard let _ = try? planFile.open(.readWrite) else {
             print("open file failed..")
@@ -27,6 +28,22 @@ struct PlanManager {
             return nil
         }
         self.planDict = configDict
+    }
+    deinit {
+        planFile.close()
+    }
+
+    var notImplementReturn: (Bool,String) {
+        return (false, "planManager's method has not been implemented..")
+    } 
+
+    func addWeekPlanFor(_ user: String) -> (Bool, String) {
+
+        return notImplementReturn
+    }
+    func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
+
+        return notImplementReturn
     }
 }
 

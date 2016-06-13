@@ -139,19 +139,18 @@ struct FanPlanCommand {
     }
     
     func executedReport(user: String) -> (Bool, String) {
+        guard var planManager = PlanManager() else {
+            return (false, "PlanManager doesn't work...")
+        }
         var success = true
         var report = ""
-        if let planManager = PlanManager() {
-            print(planManager.planDict)
-        } else {
-            print("planManager initial failed...")
-        }
+       
         switch type {
         case .Week:
             if constant < 0 {
-
+                return planManager.cancelWeekPlanFor(user)
             } else {
-
+                return planManager.addWeekPlanFor(user)
             }
         case .ExplicitDayError:
         print("type check explicitdayerror!")
