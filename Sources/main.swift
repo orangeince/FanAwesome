@@ -32,7 +32,7 @@ try Dir(webRoot).create()
 // Register your own routes and handlers
 Routing.Routes[.Post, "/"] = {
     request, response in
-    print("received message!!!")
+    print("received message!!! postString: \(request.postBodyString)")
     let update = ZEGDecoder.decodeUpdate(jsonString: request.postBodyString)
     if let message = update?.message, text = message.text {
         switch text.uppercased() {
