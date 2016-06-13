@@ -28,15 +28,40 @@ struct PlanManager {
             return nil
         }
         self.planDict = configDict
+        planFile.close()
     }
 
     var notImplementReturn: (Bool,String) {
         return (false, "planManager's method has not been implemented..")
     } 
+    func save() -> Bool {
+        if let jsonString = try? planDict.jsonEncodedString {
+            try! planFile.open(.Write)
+            defer {
+                planFile.close()
+            }
+            if let _ = try planFile.write(string: jsonString) {
+                return true
+            }
+            print("plan write failed...")
+            return false
+        }
+        print("dictionary jsonencode failed...")
+        return false
+    }
 
     func addWeekPlanFor(_ user: String) -> (Bool, String) {
-
-        return notImplementReturn
+        if let userPlan = planDict[user] as? [String: Any] {
+            return (true, "already add the same plan before!!!")
+        } else {
+            planDict[user] = ["week": true]
+            if save() {
+                return (true, "addWeekPlan Successs!!")
+            } else {
+                return (false, "addWeekPlan failed....")
+            }
+        }
+        //return notImplementReturn
     }
     func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
 
