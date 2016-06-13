@@ -14,10 +14,8 @@ class FlanHelper {
         //let cUrl = CURL(url: "https://hook.bearychat.com/=bw85y/incoming/1d6cc882252511592d627cfab2bfe99d")
         let cUrl = CURL(url: "http://182.92.65.174:8181")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Content-Type: application/json")
-        //let tmpUrl = curl_easy_init()
-        //let v = curl_easy_escape(tmpUrl, postString, 0)!
-        //_ = cUrl.setOption(CURLOPT_POSTFIELDS, v: v)
         _ = cUrl.setOption(CURLOPT_POSTFIELDS, s: postString)
+        _ = cUrl.setOption(CURLOPT_POSTFIELDSIZE, i: postString.utf8.count)
         cUrl.perform{
             code, header, body in
             if code == 0 {
