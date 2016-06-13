@@ -56,11 +56,12 @@ struct PlanManager {
     mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
         print(planDict)
         if let _ = planDict[user] as? [String: Any] {
-            return (true, "你之前已经订过工作日的计划了哦,我是不会忘哒（＾ω＾）")
+            return (true, "\(user)之前已经订过工作日的计划了哦,我是不会忘哒（＾ω＾）")
         } else {
             planDict[user] = ["week": true]
             if save() {
-                return (true, "工作日点晚餐的工作就交给智能晚饭君啦 (ง •̀_•́)ง")
+                FlanHelper.fanOrderFor(user)
+                return (true, "\(user)工作日点晚餐的工作就交给智能晚饭君啦 (ง •̀_•́)ง")
             } else {
                 return (false, occurBugReport)
             }
@@ -71,12 +72,13 @@ struct PlanManager {
         if let _ = planDict[user] as? [String: Any] {
             planDict[user] = nil
             if save() {
-                return (true, "已经帮你取消了工作日点饭计划，再来哦 ...(｡•ˇ‸ˇ•｡) ...")
+                FlanHelper.cancelFanOrderFor(user)
+                return (true, "已经帮\(user)取消了工作日点饭计划，再来哦 ...(｡•ˇ‸ˇ•｡) ...")
             } else {
                 return (false, occurBugReport)
             }
         } else {
-            return (true, "哎呦，你之前还没有制定过点饭计划哦 (oﾟωﾟo)")
+            return (true, "哎呦，\(user)之前还没有制定过点饭计划哦 (oﾟωﾟo)")
         }
     }
 }
