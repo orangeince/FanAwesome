@@ -3,11 +3,11 @@ import cURL
 
 class FlanHelper {
     static func fanOrderFor(_ user: String) {
-        let postString = "{\"text\": \"fan +1 \(user)\"}"
+        let postString = "{\"text\":\"fan +1 \(user)\"}"
         performRequestWith(postString)
     }
     static func cancelFanOrderFor(_ user: String) {
-        let postString = "{\"text\": \"fan -1 \(user)\"}"
+        let postString = "{\"text\":\"fan -1 \(user)\"}"
         performRequestWith(postString)
     }
     static func performRequestWith(_ postString: String) {
