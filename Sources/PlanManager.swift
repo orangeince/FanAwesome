@@ -55,6 +55,7 @@ struct PlanManager {
         if let _ = planDict[user] as? [String: Any] {
             return (true, "already add the same plan before!!!")
         } else {
+            print("will add weekplan")
             planDict[user] = ["week": true]
             if save() {
                 return (true, "addWeekPlan Successs!!")
