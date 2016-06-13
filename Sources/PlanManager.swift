@@ -78,7 +78,6 @@ struct PlanManager {
         } else {
             return (true, "哎呦，你之前还没有制定过点饭计划哦 (oﾟωﾟo)")
         }
-        return notImplementReturn
     }
 }
 
