@@ -67,7 +67,7 @@ struct PlanManager {
         }
         //return notImplementReturn
     }
-    func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
+    mutating func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
         if let _ = planDict[user] as? [String: Any] {
             planDict[user] = nil
             if save() {
