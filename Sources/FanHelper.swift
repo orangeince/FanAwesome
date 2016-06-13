@@ -17,7 +17,7 @@ class FlanHelper {
         cUrl.perform{
             code, header, body in
             if code == 0 {
-                print("performRequest Success!! post: \(postString)")
+                print("performRequest Success!! body:\(body) post: \(postString)")
             } else {
                 let response = cUrl.responseCode
                 print("performRequest failed... code: \(response) post: \(postString)")
