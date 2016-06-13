@@ -29,9 +29,6 @@ struct PlanManager {
         }
         self.planDict = configDict
     }
-    deinit {
-        planFile.close()
-    }
 
     var notImplementReturn: (Bool,String) {
         return (false, "planManager's method has not been implemented..")
