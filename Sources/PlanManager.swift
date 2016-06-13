@@ -35,8 +35,8 @@ struct PlanManager {
         return (false, "planManager's method has not been implemented..")
     } 
     func save() -> Bool {
-        if let jsonString = try? planDict.jsonEncodedString {
-            try! planFile.open(.Write)
+        if let jsonString = try? planDict.jsonEncodedString() {
+            try! planFile.open(.write)
             defer {
                 planFile.close()
             }
