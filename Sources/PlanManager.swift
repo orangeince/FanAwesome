@@ -51,7 +51,7 @@ struct PlanManager {
         return false
     }
 
-    mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
+    func addWeekPlanFor(_ user: String) -> (Bool, String) {
         print(planDict)
         if let _ = planDict[user] as? [String: Any] {
             return (true, "already add the same plan before!!!")
