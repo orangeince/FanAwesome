@@ -40,7 +40,7 @@ struct PlanManager {
             defer {
                 planFile.close()
             }
-            if let _ = try planFile.write(string: jsonString) {
+            if let _ = try? planFile.write(string: jsonString) {
                 return true
             }
             print("plan write failed...")
@@ -51,7 +51,7 @@ struct PlanManager {
     }
 
     mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
-        if let userPlan = planDict[user] as? [String: Any] {
+        if let _ = planDict[user] as? [String: Any] {
             return (true, "already add the same plan before!!!")
         } else {
             planDict[user] = ["week": true]
