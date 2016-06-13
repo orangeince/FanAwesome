@@ -1,5 +1,5 @@
 import PerfectCURL
-//import cURL
+import cURL
 
 class FlanHelper {
     static func fanOrderFor(_ user: String) {
