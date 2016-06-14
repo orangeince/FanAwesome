@@ -44,7 +44,7 @@ Routing.Routes[.Post, "/"] = {
                break;
         }
     }
-    
+    response.appendBody(string: "hello")
     //response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, world!</body></html>")
     response.requestCompleted()
 }
