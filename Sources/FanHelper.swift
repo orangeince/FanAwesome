@@ -20,8 +20,8 @@ class FlanHelper {
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "HTTP/1.1")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Connection: close")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Content-Type: application/json")
-        _ = curl.setOption(CURLOPT_POSTFIELDS, v: UnsafeMutablePointer<UInt8>(byteArray))
-        _ = curl.setOption(CURLOPT_POSTFIELDSIZE, int: byteArray.count)
+        _ = cUrl.setOption(CURLOPT_POSTFIELDS, v: UnsafeMutablePointer<UInt8>(byteArray))
+        _ = cUrl.setOption(CURLOPT_POSTFIELDSIZE, int: byteArray.count)
         cUrl.perform{
             code, header, body in
             if code == 0 {
