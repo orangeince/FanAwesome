@@ -3,11 +3,13 @@ import cURL
 
 class FlanHelper {
     static func fanOrderFor(_ user: String) {
-        let postString = "{\"text\":\"fan +1 \(user)\"}"
+        //let postString = "{\"text\":\"fan +1 \(user)\"}"
+        let postString = "mytestmytest!!!"
         performRequestWith(postString)
     }
     static func cancelFanOrderFor(_ user: String) {
-        let postString = "{\"text\":\"fan -1 \(user)\"}"
+        //let postString = "{\"text\":\"fan -1 \(user)\"}"
+        let postString = "mytestmytest!!!"
         performRequestWith(postString)
     }
     static func performRequestWith(_ postString: String) {
@@ -15,6 +17,7 @@ class FlanHelper {
         let cUrl = CURL(url: "http://182.92.65.174:8181")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "HTTP/1.1")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Content-Type: application/json")
+        _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Connection: close")
         _ = cUrl.setOption(CURLOPT_POST, int: 1)
         _ = cUrl.setOption(CURLOPT_POSTFIELDS, s: postString)
         _ = cUrl.setOption(CURLOPT_POSTFIELDSIZE, int: postString.utf8.count)
