@@ -3,16 +3,16 @@ import cURL
 
 class FlanHelper {
     static func fanOrderFor(_ user: String) {
-        let postString = "{\"text\": \"fan +1 晚饭 \(user)\"}"
+        let postString = "{\"text\": \"fanplan +1 晚饭 \(user)\"}"
         performRequestWith(postString)
     }
     static func cancelFanOrderFor(_ user: String) {
-        let postString = "{\"text\": \"fan -1 晚饭 \(user)\"}"
+        let postString = "{\"text\": \"fanplan -1 晚饭 \(user)\"}"
         performRequestWith(postString)
     }
     static func performRequestWith(_ postString: String) {
-        let cUrl = CURL(url: "https://hook.bearychat.com/=bw85y/incoming/1d6cc882252511592d627cfab2bfe99d")
-        //let cUrl = CURL(url: "http://182.92.65.174:8181")
+        //let cUrl = CURL(url: "https://hook.bearychat.com/=bw85y/incoming/1d6cc882252511592d627cfab2bfe99d")
+        let cUrl = CURL(url: "http://182.92.65.174:8181/fanplan")
         let byteArray = [UInt8](postString.utf8)
 
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "HTTP/1.1")
