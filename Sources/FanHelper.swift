@@ -12,10 +12,8 @@ class FlanHelper {
     }
     static func performRequestWith(_ postString: String) {
         //let cUrl = CURL(url: "https://hook.bearychat.com/=bw85y/incoming/1d6cc882252511592d627cfab2bfe99d")
-        let postStringLen = postString.utf8.count
         let cUrl = CURL(url: "http://182.92.65.174:8181")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "HTTP/1.1")
-        _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Transfer-Encoding: chunked")
         _ = cUrl.setOption(CURLOPT_HTTPHEADER, s: "Content-Type: application/json")
         _ = cUrl.setOption(CURLOPT_POST, int: 1)
         _ = cUrl.setOption(CURLOPT_POSTFIELDS, s: postString)
