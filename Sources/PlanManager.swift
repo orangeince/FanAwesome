@@ -61,7 +61,8 @@ struct PlanManager {
             if let hasWeekPlan = plan["week"] as? Bool where hasWeekPlan == true {
                 return (true, "\(user)之前已经订过工作日的计划了哦,我是不会忘哒（＾ω＾）")
             } else {
-                planDict[user]["week"] = true
+                plan["week"] = true
+                planDict[user] = plan
                 if save() {
                     return (true, "\(user)工作日点晚餐的工作就交给智能晚饭君啦 (ง •̀_•́)ง")
                 } else {
@@ -83,7 +84,8 @@ struct PlanManager {
             if plan["week"] == nil || plan["week"]! as! Bool == false {
                 return (true, "哎呦，\(user)之前还没有制定过点饭计划哦 (oﾟωﾟo)")
             }
-            planDict[user]["week"] = false
+            plan["week"] = false
+            planDict[user] = plan
             if save() {
                 FlanHelper.cancelFanOrderFor(user)
                 return (true, "已经帮\(user)取消了工作日点饭计划，再来哦 ...(｡•ˇ‸ˇ•｡) ...")
@@ -100,7 +102,8 @@ struct PlanManager {
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
-                        planDict[user]["exceptWeekDay"] = exceptWeekDayPlan
+                        plan["exceptWeekDay"] = exceptWeekDayPlan
+                        planDict[user] = plan
                         if save() {
                             return (true, "TODO: success...")
                         } else {
@@ -118,17 +121,20 @@ struct PlanManager {
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
-                        planDict[user]["exceptWeekDay"] = exceptWeekDayPlan
+                        plan["exceptWeekDay"] = exceptWeekDayPlan
+                        planDict[user] = plan
                     }
                 }
-                planDict[user]["weekDay"] = weekDayPlan
+                plan["weekDay"] = weekDayPlan
+                planDict[user] = plan
                 if save() {
                     return (true, "TODO, success...")
                 } else {
                     return saveFailedReport
                 }
             } else {
-                planDict[user]["weekDay"] = [day]
+                plan["weekDay"] = [day]
+                planDict[user] = plan
                 if save() {
                     return (true, "TODO, success...")
                 } else {
