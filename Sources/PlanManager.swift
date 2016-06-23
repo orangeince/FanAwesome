@@ -124,6 +124,13 @@ struct PlanManager {
                 } else {
                     return saveFailedReport
                 }
+            } else {
+                plan["weekDay"] = [day]
+                if save() {
+                    return (true, "TODO, success...")
+                } else {
+                    return saveFailedReport
+                }
             }
         } else {
             planDict[user] = ["WeekDay": [day]]
