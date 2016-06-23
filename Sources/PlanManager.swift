@@ -95,7 +95,7 @@ struct PlanManager {
         }
     }
     mutating func addWeekDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
-        if let plan = planDict[user] as? [String: Any] {
+        if var plan = planDict[user] as? [String: Any] {
             if let hasWeekPlan = plan["week"] as? Bool where hasWeekPlan == true {
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
                     if let idx = exceptWeekDayPlan.index(of: day) {
