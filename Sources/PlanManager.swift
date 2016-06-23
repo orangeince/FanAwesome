@@ -37,6 +37,7 @@ struct PlanManager {
 
     func save() -> Bool {
         print("save plan ing.....")
+        print("plan: \(planDict)")
         if let jsonString = try? planDict.jsonEncodedString() {
             try! planFile.open(.write)
             defer {
