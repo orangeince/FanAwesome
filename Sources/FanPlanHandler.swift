@@ -152,6 +152,12 @@ struct FanPlanCommand {
             } else {
                 return planManager.addWeekPlanFor(user)
             }
+        case .WeekDay:
+            if constant < 0 {
+                return planManager.cancelWeekPlanFor(user, withDay: -constant)
+            } else {
+                return planManager.addWeekDayPlanFor(user, withDay: constant)
+            }
         case .ExplicitDayError:
         print("type check explicitdayerror!")
             success = false
