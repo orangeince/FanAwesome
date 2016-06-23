@@ -154,7 +154,7 @@ struct FanPlanCommand {
             }
         case .WeekDay:
             if constant < 0 {
-                return planManager.cancelWeekPlanFor(user, withDay: -constant)
+                return planManager.cancelWeekPlanFor(user, withDay: abs(constant))
             } else {
                 return planManager.addWeekDayPlanFor(user, withDay: constant)
             }
