@@ -80,7 +80,7 @@ struct PlanManager {
     }
     mutating func cancelWeekPlanFor(_ user: String) -> (Bool, String) {
         if var plan = planDict[user] as? [String: Any] {
-            if plan["week"] == nil || plan["week"]! as Bool == false {
+            if plan["week"] == nil || plan["week"]! as! Bool == false {
                 return (true, "哎呦，\(user)之前还没有制定过点饭计划哦 (oﾟωﾟo)")
             }
             plan["week"] = false
@@ -114,7 +114,7 @@ struct PlanManager {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
                 weekDayPlan.append(day)
-                if let exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
+                if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
                     }
@@ -135,7 +135,7 @@ struct PlanManager {
         }
     }
     mutating func cancelWeekDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
-        if let plan = planDict[user] as? [String: Any] {
+        if let _ = planDict[user] as? [String: Any] {
             return notImplementedReport
         } else {
             planDict[user] = ["exceptWeekDay": [day]]
