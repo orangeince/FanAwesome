@@ -118,7 +118,6 @@ struct PlanManager {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
-                weekDayPlan.append(day)
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
@@ -126,6 +125,7 @@ struct PlanManager {
                         planDict[user] = plan
                     }
                 }
+                weekDayPlan.append(day)
                 plan["weekDay"] = weekDayPlan
                 planDict[user] = plan
                 if save() {
