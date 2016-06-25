@@ -117,7 +117,7 @@ struct PlanManager {
                 print("bugtag: is array")
                 if var weekDayPlan = weekDayPlan as? [Int] {
                     print("bugtag: is Int array")
-                    if weekDayPlan.contains(NSNumber(int: day)) {
+                    if weekDayPlan.contains(day) {
                         return (true, "TODO,yi jing tian jia guo ci jihua")
                     }
                     if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
@@ -127,7 +127,7 @@ struct PlanManager {
                             planDict[user] = plan
                         }
                     }
-                    weekDayPlan.append(NSNumber(int: day))
+                    weekDayPlan.append(day)
                     plan["weekDay"] = weekDayPlan
                     planDict[user] = plan
                     if save() {
