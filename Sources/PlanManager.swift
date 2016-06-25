@@ -113,24 +113,37 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            if var weekDayPlan = plan["weekDay"] as? [NSNumber] {
-                if weekDayPlan.contains(NSNumber(int: day)) {
-                    return (true, "TODO,yi jing tian jia guo ci jihua")
-                }
-                if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
-                    if let idx = exceptWeekDayPlan.index(of: day) {
-                        exceptWeekDayPlan.remove(at: idx)
-                        plan["exceptWeekDay"] = exceptWeekDayPlan
-                        planDict[user] = plan
+            if var weekDayPlan = plan["weekDay"] as? [Any] {
+                print("bugtag: is array")
+                if var weekDayPlan = weekDayPlan as? [Int] {
+                    print("bugtag: is Int array")
+                    if weekDayPlan.contains(NSNumber(int: day)) {
+                        return (true, "TODO,yi jing tian jia guo ci jihua")
                     }
-                }
-                weekDayPlan.append(NSNumber(int: day))
-                plan["weekDay"] = weekDayPlan
-                planDict[user] = plan
-                if save() {
-                    return (true, "TODO, append weekday plan success...")
+                    if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
+                        if let idx = exceptWeekDayPlan.index(of: day) {
+                            exceptWeekDayPlan.remove(at: idx)
+                            plan["exceptWeekDay"] = exceptWeekDayPlan
+                            planDict[user] = plan
+                        }
+                    }
+                    weekDayPlan.append(NSNumber(int: day))
+                    plan["weekDay"] = weekDayPlan
+                    planDict[user] = plan
+                    if save() {
+                        return (true, "TODO, append weekday plan success...")
+                    } else {
+                        return saveFailedReport
+                    }
                 } else {
-                    return saveFailedReport
+                    print("debugtag: not Int array.. ...")
+                    plan["weekDay"] = [day]
+                    planDict[user] = plan
+                    if save() {
+                        return (true, "TODO, success...")
+                    } else {
+                        return saveFailedReport
+                    }
                 }
             } else {
                 print("debugtag: not hasWeekDayPlan...")
