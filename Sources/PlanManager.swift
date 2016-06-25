@@ -129,7 +129,7 @@ struct PlanManager {
                 plan["weekDay"] = weekDayPlan
                 planDict[user] = plan
                 if save() {
-                    return (true, "TODO, success...")
+                    return (true, "TODO, append weekday plan success...")
                 } else {
                     return saveFailedReport
                 }
