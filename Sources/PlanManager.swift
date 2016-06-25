@@ -26,11 +26,12 @@ struct PlanManager {
             print("configString jsonDecoded failed....")
             return nil
         }
+        /*
         guard let configDict = configJSON as? [String: Any] else {
             print("configDict initial failed.....")
             return nil
-        }
-        self.planDict = configDict
+        }*/
+        self.planDict = configJSON.getJSONValues()
         planFile.close()
         print(planDict)
     }
