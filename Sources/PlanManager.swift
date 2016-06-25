@@ -57,7 +57,6 @@ struct PlanManager {
      * TODO: need add comment
      */
     mutating func addWeekPlanFor(_ user: String) -> (Bool, String) {
-        print(planDict)
         if var plan = planDict[user] as? [String: Any] {
             if let hasWeekPlan = plan["week"] as? Bool where hasWeekPlan == true {
                 return (true, "\(user)之前已经订过工作日的计划了哦,我是不会忘哒（＾ω＾）")
@@ -114,8 +113,8 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            if var weekDayPlan = plan["weekDay"] as? [Int] {
-                if weekDayPlan.contains(day) {
+            if var weekDayPlan = plan["weekDay"] as? [String] {
+                if weekDayPlan.contains(String(day)) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
@@ -125,7 +124,7 @@ struct PlanManager {
                         planDict[user] = plan
                     }
                 }
-                weekDayPlan.append(day)
+                weekDayPlan.append(String(day))
                 plan["weekDay"] = weekDayPlan
                 planDict[user] = plan
                 if save() {
