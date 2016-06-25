@@ -134,6 +134,7 @@ struct PlanManager {
                     return saveFailedReport
                 }
             } else {
+                print("debugtag: not hasWeekDayPlan...")
                 plan["weekDay"] = [day]
                 planDict[user] = plan
                 if save() {
