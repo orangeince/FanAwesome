@@ -113,8 +113,8 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            if var weekDayPlan = plan["weekDay"] as? [String] {
-                if weekDayPlan.contains(String(day)) {
+            if var weekDayPlan = plan["weekDay"] as? [NSNumber] {
+                if weekDayPlan.contains(NSNumber(int: day)) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
                 if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
@@ -124,7 +124,7 @@ struct PlanManager {
                         planDict[user] = plan
                     }
                 }
-                weekDayPlan.append(String(day))
+                weekDayPlan.append(NSNumber(int: day))
                 plan["weekDay"] = weekDayPlan
                 planDict[user] = plan
                 if save() {
