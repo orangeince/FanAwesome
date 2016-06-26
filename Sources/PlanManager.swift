@@ -113,7 +113,7 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            if let weekDayPlan = convertIntArray(plan["weekDay"]) {
+            if var weekDayPlan = convertIntArray(plan["weekDay"]) {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
