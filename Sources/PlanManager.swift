@@ -160,7 +160,7 @@ struct PlanManager {
                 if var weekDayPlan = convertIntArray(plan["weekDay"]) {
                     if let idx = weekDayPlan.index(of: day) {
                         weekDayPlan.remove(at: idx)
-                        plan["weekDay"] = weekDay
+                        plan["weekDay"] = weekDayPlan
                     }
                 }
                 exceptWeekDayPlan.append(day)
