@@ -115,7 +115,7 @@ struct PlanManager {
             }
             if let originWeekDayPlan = plan["weekDay"] as? [Any] {
                 var weekDayPlan: [Int] = []
-                originWeekDayPlan.foreach{
+                originWeekDayPlan.forEach{
                     if let i = $0 as? Int {
                         weekDayPlan.append(i)
                     }
