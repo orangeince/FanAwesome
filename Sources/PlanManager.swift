@@ -113,13 +113,7 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            if let originWeekDayPlan = plan["weekDay"] as? [Any] {
-                var weekDayPlan: [Int] = []
-                originWeekDayPlan.forEach{
-                    if let i = $0 as? Int {
-                        weekDayPlan.append(i)
-                    }
-                }
+            if let weekDayPlan = convertIntArray(plan["weekDay"]) {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
@@ -168,6 +162,19 @@ struct PlanManager {
                 return saveFailedReport
             }
         }
+    }
+
+    func convertIntArray(_ any: Any?) -> [Int]? {
+        if let anyArr = any as? [Any] {
+            return anyArr.reduce([Int]()) {
+                intArry, any in
+                if let i = any as? Int {
+                    return intArry + [i]
+                }
+                return intArry
+            }
+        }
+        return nil
     }
 }
 
