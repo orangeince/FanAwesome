@@ -116,6 +116,9 @@ struct PlanManager {
             let tWDP = plan["weekDay"]
             if let test = tWDP as? [Any] {
                 print("test: \(test), twdp:\(tWDP)")
+                if test is [Int] {
+                    print("test is array of Int!!!!")
+                }
                 for item in test {
                     if item is JSONConvertible {
                         print("\(item) is JSONConvertible")
