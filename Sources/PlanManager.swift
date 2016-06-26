@@ -99,7 +99,7 @@ struct PlanManager {
     mutating func addWeekDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
         if var plan = planDict[user] as? [String: Any] {
             if let hasWeekPlan = plan["week"] as? Bool where hasWeekPlan == true {
-                if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
+                if var exceptWeekDayPlan = convertIntArray(plan["exceptWeekDay"]) {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
                         plan["exceptWeekDay"] = exceptWeekDayPlan
@@ -117,7 +117,7 @@ struct PlanManager {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
                 }
-                if var exceptWeekDayPlan = plan["exceptWeekDay"] as? [Int] {
+                if var exceptWeekDayPlan = convertIntArray(plan["exceptWeekDay"]) {
                     if let idx = exceptWeekDayPlan.index(of: day) {
                         exceptWeekDayPlan.remove(at: idx)
                         plan["exceptWeekDay"] = exceptWeekDayPlan
@@ -152,8 +152,34 @@ struct PlanManager {
         }
     }
     mutating func cancelWeekDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
-        if let _ = planDict[user] as? [String: Any] {
-            return notImplementedReport
+        if var plan = planDict[user] as? [String: Any] {
+            if var exceptWeekDayPlan = convertIntArray(plan["exceptWeekDay"]) {
+                if exceptWeekDayPlan.contains(day) {
+                    return (true, "TODO, yijing tianjia youguo ci jihuala")
+                }
+                if var weekDayPlan = convertIntArray(plan["weekDay"]) {
+                    if let idx = weekDayPlan.index(of: day) {
+                        weekDayPlan.remove(at: idx)
+                        plan["weekDay"] = weekDay
+                    }
+                }
+                exceptWeekDayPlan.append(day)
+                plan["exceptWeekDay"] = exceptWeekDayPlan
+                planDict[user] = plan
+                if save() {
+                    return (true, "TODO, append exceptWeekDayPlan successs..")
+                } else {
+                    return saveFailedReport
+                }
+            } else {
+                plan["exceptWeekDay"] = [day]
+                planDict[user] = plan
+                if save() {
+                    return (true, "TODO, xin jian exceptWeekDayPlan success...")
+                } else {
+                    return saveFailedReport
+                }
+            }
         } else {
             planDict[user] = ["exceptWeekDay": [day]]
             if save() {
