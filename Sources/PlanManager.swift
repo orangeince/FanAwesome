@@ -113,7 +113,9 @@ struct PlanManager {
                 }
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
-            print(plan["weekDay"])
+            let tWDP = plan["weekDay"]
+            let test = tWDP as? [Int]
+            print("test: \(test), twdp:\(tWDP)")
             if var weekDayPlan = plan["weekDay"] as? [Int] {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
