@@ -114,8 +114,17 @@ struct PlanManager {
                 return (true, "TODO, yi jing you le gongzuori jihua bu xuyao zai.. ")
             }
             let tWDP = plan["weekDay"]
-            let test = tWDP as? [Any]
-            print("test: \(test), twdp:\(tWDP)")
+            if let test = tWDP as? [Any] {
+                print("test: \(test), twdp:\(tWDP)")
+                for item in test {
+                    if item is JSONConvertible {
+                        print("\(item) is JSONConvertible")
+                    }
+                    if item is Int {
+                        print("\(item) is Int!!!")
+                    }
+                }
+            }
             if var weekDayPlan = plan["weekDay"] as? [Int] {
                 if weekDayPlan.contains(day) {
                     return (true, "TODO,yi jing tian jia guo ci jihua")
