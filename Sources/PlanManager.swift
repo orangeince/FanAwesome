@@ -298,7 +298,7 @@ struct PlanManager {
 func getFormattedDateOfToday() -> Int {
     let today = NSDate()
     let calendar = NSCalendar.currentCalendar()
-    let dateComponents = calendar.components([.Day, .Month], fromDate: today)
+    let dateComponents = calendar.components([.Day, .Month], from: today)
     return dateComponents.month * 100 + dateComponents.day
 }
 
