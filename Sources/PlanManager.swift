@@ -226,7 +226,7 @@ struct PlanManager {
         let today = getFormattedDateOfToday()
         print("today: \(today)")
         if day < today {
-            return (false, "指定的日期是过去的时间哦，请确认日期"）
+            return (false, "指定的日期是过去的时间哦，请确认日期")
         } else if day = today {
             FlanHelper.fanOrderFor(user)
             return (true, "ok,今天的饭已经帮你点上了哦")
