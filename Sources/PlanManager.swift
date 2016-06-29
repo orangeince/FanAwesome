@@ -201,24 +201,24 @@ struct PlanManager {
         }
     }
 
-    func addOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+    mutating func addOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
         let day = 0
         let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
 
-    func cancelOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+    mutating func cancelOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
         let day = 0
         let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
 
-    func addExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
+    mutating func addExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
         let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
 
-    func cancelExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
+    mutating func cancelExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
         let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
@@ -227,7 +227,7 @@ struct PlanManager {
         let planKey = keySuit.planKey
         let opposedPlanKey = keySuit.opposedPlanKey
 
-        if var plan = planDict[user] = as? [String: Any] {
+        if var plan = planDict[user] as? [String: Any] {
             if var originPlan = convertIntArray(plan[planKey]) {
                 if originPlan.contains(day) {
                     return (true, "已经制定过此计划哦")
