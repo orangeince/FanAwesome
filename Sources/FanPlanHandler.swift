@@ -160,6 +160,12 @@ struct FanPlanCommand {
             }
         //case .OffsetDay:
         //
+        case .ExplicitDay:
+            if constant < 0 {
+                return planManager.cancelExplicitDayPlanFor(user, withDay: -constant)
+            } else {
+                return planManager.addExplicitDayPlanFor(user, withDay: -constant)
+            }
         case .ExplicitDayError:
         print("type check explicitdayerror!")
             success = false
