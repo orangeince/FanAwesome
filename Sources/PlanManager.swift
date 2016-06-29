@@ -207,7 +207,7 @@ struct PlanManager {
             FlanHelper.fanOrderFor(user)
             return (true, "OK,今天的饭已经帮你点上啦")
         }
-        let day = getFormattedDateOfToday + offset
+        let day = getFormattedDateOfToday() + offset
         let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
@@ -217,7 +217,7 @@ struct PlanManager {
             FlanHelper.cancelFanOrderFor(user)
             return (true, "OK,今天的饭已经帮你取消喽")
         }
-        let day = getFormattedDateOfToday + offset
+        let day = getFormattedDateOfToday() + offset
         let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
