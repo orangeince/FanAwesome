@@ -319,7 +319,7 @@ func getFormattedDateOfToday() -> Int {
     return getFormattedDateOf(NSDate())
 }
 func getFormattedDateOffsetOfToday(with: Int) -> Int{
-    let offsetTimeInterval = with * 3600 * 24
+    let offsetTimeInterval = NSTimeInterval(with * 3600 * 24)
     return getFormattedDateOf(NSDate().addingTimeInterval(offsetTimeInterval))
 }
 
