@@ -202,12 +202,20 @@ struct PlanManager {
     }
 
     mutating func addOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+        if offset == 0 {
+            FlanHelper.fanOrderFor(user)
+            return (true, "OK,今天的饭已经帮你点上啦")
+        }
         let day = 0
         let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
     }
 
     mutating func cancelOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+        if offset == 0 {
+            FlanHelper.cancelFanOrderFor(user)
+            return (true, "OK,今天的饭已经帮你取消喽")
+        }
         let day = 0
         let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
         return makePlanFor(user, withDay: day, keySuit: keySuit)
@@ -285,5 +293,11 @@ struct PlanManager {
         }
         return nil
     }
+}
+func getFormattedDateOfToday() -> Int {
+    let today = NSDate()
+    let calendar = NSCalendar.currentCalendar()
+    let dateComponents = calendar.components([.Day, .Month], fromDate: today)
+    return dateComponents.month * 100 + dateComponents.day
 }
 
