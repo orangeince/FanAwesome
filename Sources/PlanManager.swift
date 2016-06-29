@@ -1,4 +1,5 @@
 import PerfectLib
+import Foundation
 
 let occurBugReport = "哎呀，不好，粗bug啦 (⊙０⊙) "
 let saveFailedReport = (false, occurBugReport)
