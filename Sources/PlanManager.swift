@@ -4,9 +4,20 @@ let occurBugReport = "哎呀，不好，粗bug啦 (⊙０⊙) "
 let saveFailedReport = (false, occurBugReport)
 let notImplementedReport = (false, "planManager's method has not been implemented..")
 
+//制定计划的type
+enum PlanType {
+    case Add    //添加计划
+    case Cancel //取消计划
+}
+
 struct PlanManager {
     var planDict: [String: Any] 
     let planFile: File
+
+    struct PlanKeySuit {
+        let planKey: String
+        let opposedPlanKey: String
+    }
     init?() {
         planFile = File("./plan.config")
         print("plan path: \(planFile.path)")
@@ -184,6 +195,78 @@ struct PlanManager {
             planDict[user] = ["exceptWeekDay": [day]]
             if save() {
                 return (true, "TODO: cancelWeekDayPlan success...")
+            } else {
+                return saveFailedReport
+            }
+        }
+    }
+
+    func addOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+        let day = 0
+        let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
+        return makePlanFor(user, withDay: day, keySuit: keySuit)
+    }
+
+    func cancelOffsetDayPlanFor(_ user: String, withOffset offset: Int) -> (Bool, String) {
+        let day = 0
+        let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
+        return makePlanFor(user, withDay: day, keySuit: keySuit)
+    }
+
+    func addExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
+        let keySuit = PlanKeySuit(planKey: "explicitDay", opposedPlanKey: "exceptExplicitDay")
+        return makePlanFor(user, withDay: day, keySuit: keySuit)
+    }
+
+    func cancelExplicitDayPlanFor(_ user: String, withDay day: Int) -> (Bool, String) {
+        let keySuit = PlanKeySuit(planKey: "exceptExplicitDay", opposedPlanKey: "explicitDay")
+        return makePlanFor(user, withDay: day, keySuit: keySuit)
+    }
+
+    mutating func makePlanFor(_ user: String, withDay day: Int, keySuit: PlanKeySuit) -> (Bool, String) {
+        let planKey = keySuit.planKey
+        let opposedPlanKey = keySuit.opposedPlanKey
+
+        if var plan = planDict[user] = as? [String: Any] {
+            if var originPlan = convertIntArray(plan[planKey]) {
+                if originPlan.contains(day) {
+                    return (true, "已经制定过此计划哦")
+                }
+                if var opposedPlan = convertIntArray(plan[opposedPlanKey]) {
+                    if let idx = opposedPlan.index(of: day) {
+                        opposedPlan.remove(at: idx)
+                        plan[opposedPlanKey] = opposedPlan
+                        planDict[user] = plan
+                    }
+                }
+                originPlan.append(day)
+                plan[planKey] = originPlan
+                planDict[user] = plan
+                if save() {
+                    return (true, "OK,计划添加成功")
+                } else {
+                    return saveFailedReport
+                }
+            } else {
+                if var opposedPlan = convertIntArray(plan[opposedPlanKey]) {
+                    if let idx = opposedPlan.index(of: day) {
+                        opposedPlan.remove(at: idx)
+                        plan[opposedPlanKey] = opposedPlan
+                        planDict[user] = plan
+                    }
+                }
+                plan[planKey] = [day]
+                planDict[user] = plan
+                if save() {
+                    return (true, "OK, 新建计划成功")
+                } else {
+                    return saveFailedReport
+                }
+            }
+        } else {
+            planDict[user] = [planKey : [day]]
+            if save() {
+                return (true, "新建订饭计划成功")
             } else {
                 return saveFailedReport
             }
