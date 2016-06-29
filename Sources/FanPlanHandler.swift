@@ -106,7 +106,10 @@ enum FanPlanCommandType {
         } else if str =~ OffsetDay.checkPattern {
             let (multiplier, value) = splitCommandStr(str)
             print("multiplier: \(multiplier), value:\(value)")
-            let n = offsetDayDict[value]!
+            var n = offsetDayDict[value]!
+            if multiplier == -1 && n == 0 {
+                n = 9999
+            }
             return (OffsetDay, multiplier * n)
         } else if str =~ OffsetDayError.checkPattern {
             //let (multiplier, value) = splitCommandStr(str)
@@ -158,8 +161,12 @@ struct FanPlanCommand {
             } else {
                 return planManager.addWeekDayPlanFor(user, withDay: constant)
             }
-        //case .OffsetDay:
-        //
+        case .OffsetDay:
+            if constant < 0 {
+                return planManager.cancelOffsetDayPlanFor(user, withOffset: -constant)
+            } else {
+                return planManager.addOffsetDayPlanFor(user, withOffset: constant)
+            }
         case .ExplicitDay:
             if constant < 0 {
                 return planManager.cancelExplicitDayPlanFor(user, withDay: -constant)
