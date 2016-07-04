@@ -310,16 +310,16 @@ struct PlanManager {
         return nil
     }
 }
-func getFormattedDateOf(_ date: NSDate) -> Int {
+func getFormattedDateOf(_ date: NSDate) -> (Int, Int) {
     let calendar = NSCalendar.currentCalendar()
-    let dateComponents = calendar.components([.day, .month], from: date)!
-    return dateComponents.month * 100 + dateComponents.day
+    let dateComponents = calendar.components([.day, .month, .weekday], from: date)!
+    return (dateComponents.month * 100 + dateComponents.day, dateComponents.weekday)
 }
 func getFormattedDateOfToday() -> Int {
-    return getFormattedDateOf(NSDate())
+    return getFormattedDateOf(NSDate()).0
 }
 func getFormattedDateOffsetOfToday(with: Int) -> Int{
     let offsetTimeInterval = NSTimeInterval(with * 3600 * 24)
-    return getFormattedDateOf(NSDate().addingTimeInterval(offsetTimeInterval))
+    return getFormattedDateOf(NSDate().addingTimeInterval(offsetTimeInterval)).0
 }
 
