@@ -296,20 +296,21 @@ struct PlanManager {
             }
         }
     }
-
-    func convertIntArray(_ any: Any?) -> [Int]? {
-        if let anyArr = any as? [Any] {
-            return anyArr.reduce([Int]()) {
-                intArry, any in
-                if let i = any as? Int {
-                    return intArry + [i]
-                }
-                return intArry
-            }
-        }
-        return nil
-    }
 }
+
+func convertIntArray(_ any: Any?) -> [Int]? {
+    if let anyArr = any as? [Any] {
+        return anyArr.reduce([Int]()) {
+            intArry, any in
+            if let i = any as? Int {
+                return intArry + [i]
+            }
+            return intArry
+        }
+    }
+    return nil
+}
+
 func getFormattedDateOf(_ date: NSDate) -> (Int, Int) {
     let calendar = NSCalendar.currentCalendar()
     let dateComponents = calendar.components([.day, .month, .weekday], from: date)!
