@@ -65,5 +65,8 @@ fastlane/report.xml
 fastlane/screenshots
 
 Packages/
-Status API Training Shop Blog About
+# Status API Training Shop Blog About
+
+.build/
+plan.config
 
